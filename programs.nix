@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   environment.systemPackages = with pkgs; [
     wget
     curl
@@ -17,6 +17,9 @@
     ghostty
     zed-editor
 
+    gcc # because vim need it
+
+    swww
     dconf-editor
   ];
 
@@ -46,8 +49,9 @@
     neovim = {
       enable = true;
       defaultEditor = true;
+      package = inputs.neovim-nightly.packages.${pkgs.system}.default;
     };
 
-    niri.enable = true;
+    hyprland.enable = true;
   };
 }
