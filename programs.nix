@@ -33,6 +33,8 @@
     dconf.enable = true;
     git.enable = true;
     zoxide.enable = true;
+    lazygit.enable = true;
+
     zsh = {
       enable = true;
       enableCompletion = true;
