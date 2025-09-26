@@ -1,12 +1,8 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 { config, lib, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./nvidia.nix
       ./programs.nix
       ./hardware-configuration.nix
@@ -20,7 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "maki"; # Define your hostname.
-  # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
@@ -47,13 +42,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-  services.tailscale.enable = true;
-  services.gvfs.enable = true;
- 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
   users.defaultUserShell = pkgs.zsh;
@@ -79,6 +67,14 @@
   services.openssh.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.udisks2.enable = true;
+
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
+
+  services.tailscale.enable = true;
+  services.gvfs.enable = true;
 
   fonts = {
     packages = with pkgs; [
