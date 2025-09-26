@@ -1,0 +1,13 @@
+shell-integration = zsh
+font-family = Hasklug Nerd Font Mono
+
+font-size = 15
+theme = Kanagawa Dragon
+
+window-padding-y = 10
+window-padding-x = 12
+
+gtk-titlebar = false
+window-decoration = none
+window-theme = ghostty
+adw-toolbar-style = flat
