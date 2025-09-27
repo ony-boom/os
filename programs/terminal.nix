@@ -2,6 +2,8 @@
   environment.systemPackages = with pkgs; [
     eza # ls but wit icons
     starship # prompt
+
+    gh # github cli tool
   ];
 
   programs = {

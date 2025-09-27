@@ -3,5 +3,6 @@ vim.pack.add({
 })
 
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("nil_ls")
 
 require("lsp.mappings")

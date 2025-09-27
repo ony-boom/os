@@ -3,6 +3,8 @@
 
   environment.systemPackages = with pkgs; [
     swww
+    mako
+    libnotify
   ];
 
   xdg.portal = {

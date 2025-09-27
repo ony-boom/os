@@ -16,10 +16,13 @@
     nautilus # file manager
     fuzzel # app launcher
 
+    emote
     google-chrome
 
     ghostty
     zed-editor
+
+    wl-clipboard
   ];
 
   programs = {

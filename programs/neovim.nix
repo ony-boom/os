@@ -1,21 +1,31 @@
-{pkgs, inputs, ...}: let 
- lsp = with pkgs; [
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  lsp = with pkgs; [
+    nil
+    nixd
+
+    lua-language-server
+
     typescript-language-server
     vscode-langservers-extracted
-    lua-language-server
- ];
+  ];
 
- formatter = with pkgs; [
+  formatter = with pkgs; [
     stylua
     biome
     alejandra
     prettierd
- ];
+  ];
 in {
-  environment.systemPackages = with pkgs; [
-    gcc
-    tree-sitter
-  ] ++ lsp ++ formatter;
+  environment.systemPackages = with pkgs;
+    [
+      gcc
+      tree-sitter
+    ]
+    ++ lsp ++ formatter;
 
   programs.neovim = {
     enable = true;
