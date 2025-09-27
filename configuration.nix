@@ -1,10 +1,8 @@
 { config, lib, pkgs, ... }:
-
 {
   imports =
     [
-      ./nvidia.nix
-      ./programs.nix
+      ./programs
       ./hardware-configuration.nix
     ];
 
@@ -34,14 +32,6 @@
   services.xserver.enable = true;
   services.displayManager.gdm.enable = true;
 
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
   users.defaultUserShell = pkgs.zsh;
@@ -53,14 +43,6 @@
     ];
   };
  
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-gtk
-    ];
-  };
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -99,20 +81,24 @@
     ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
   };
 
-  systemd = {
-    user.services.polkit-gnome-authentication-agent-1 = {
-      description = "polkit-gnome-authentication-agent-1";
-      wantedBy = [ "graphical-session.target" ];
-      wants = [ "graphical-session.target" ];
-      after = [ "graphical-session.target" ];
-      serviceConfig = {
-          Type = "simple";
-          ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-          Restart = "on-failure";
-          RestartSec = 1;
-          TimeoutStopSec = 10;
-        };
+
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.graphics.enable32Bit = true;
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+
+    powerManagement = {
+      enable = false;
+      finegrained = false;
     };
+
+    open = false;
+    nvidiaSettings = true;
+    
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   # Copy the NixOS configuration file and link it from the resulting system

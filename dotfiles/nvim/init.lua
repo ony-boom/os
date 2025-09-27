@@ -76,6 +76,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.cmd("colorscheme kanagawa")
+vim.cmd(":hi statusline guibg=NONE")
 
 
 -- MAPPINGS
@@ -83,7 +84,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.keymap.set("n", "<Esc>", ":noh<CR>", {desc = "Clear searh highlights", silent = true})
-vim.keymap.set("n", "<C-s>", ":w<CR>", {desc = "Save file", silent = true})
+vim.keymap.set("n", "<C-s>", ":update<CR>", {desc = "Save file", silent = true})
 vim.keymap.set("n", "<leader>c", ":bd<CR>", {desc = "Close buffer", silent = true})
 
 vim.keymap.set("n", "<leader>e", function() Snacks.explorer() end, {desc = "File explorer", silent = true})
