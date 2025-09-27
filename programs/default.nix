@@ -14,7 +14,6 @@
     stow # for dotfiles because hm is annoying
 
     nautilus # file manager
-    fuzzel # app launcher
 
     emote
     google-chrome

@@ -1,6 +1,5 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }: {
@@ -42,8 +41,6 @@
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     hashedPassword = "$6$faLiVjJgTMyExiZ1$4rmYx.HL1RRxxCI6CCfOOZ5M8VuwZSC6mPmVxmnxJliyXGYMFwDHDx40XPAv1NilOCvlj6jMFgq9bJqpoqGhj/";
-    packages = with pkgs; [
-    ];
   };
 
   # List services that you want to enable:
