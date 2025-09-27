@@ -11,7 +11,7 @@
       enable = true;
       enableCompletion = true;
       ohMyZsh.enable = true;
-      syntaxHighlighting.enable = true;    
+      syntaxHighlighting.enable = true;
     };
   };
 }

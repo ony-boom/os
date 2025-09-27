@@ -1,10 +1,13 @@
-{ config, lib, pkgs, ... }:
 {
-  imports =
-    [
-      ./programs
-      ./hardware-configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./programs
+    ./hardware-configuration.nix
+  ];
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -15,7 +18,7 @@
 
   networking.hostName = "maki"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Indian/Antananarivo";
@@ -37,12 +40,12 @@
   users.defaultUserShell = pkgs.zsh;
   users.users.ony = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     hashedPassword = "$6$faLiVjJgTMyExiZ1$4rmYx.HL1RRxxCI6CCfOOZ5M8VuwZSC6mPmVxmnxJliyXGYMFwDHDx40XPAv1NilOCvlj6jMFgq9bJqpoqGhj/";
     packages = with pkgs; [
     ];
   };
- 
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -66,21 +69,18 @@
       monospace = ["Hasklug Nerd Font Mono"];
     };
   };
-  
 
   environment.sessionVariables = {
-    XDG_CACHE_HOME  = "$HOME/.cache";
+    XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
-    XDG_DATA_HOME   = "$HOME/.local/share";
-    XDG_STATE_HOME  = "$HOME/.local/state";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    XDG_STATE_HOME = "$HOME/.local/state";
 
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    
 
     ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
   };
-
 
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
@@ -97,7 +97,7 @@
 
     open = false;
     nvidiaSettings = true;
-    
+
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
@@ -108,4 +108,3 @@
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }
-
