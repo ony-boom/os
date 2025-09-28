@@ -4,6 +4,8 @@
     starship # prompt
 
     gh # github cli tool
+
+    openssl # some apps depends on it
   ];
 
   programs = {

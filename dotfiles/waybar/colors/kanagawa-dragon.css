@@ -1,0 +1,4 @@
+@define-color bg rgba(24, 22, 22, 1);
+@define-color fg rgba(197, 201, 197, 1);
+@define-color muted rgba(197, 201, 197, 0.3);
+@define-color selected-bg rgba(197, 201, 197, 0.06);

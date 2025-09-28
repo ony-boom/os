@@ -1,0 +1,24 @@
+@import "./colors/kanagawa-dragon.css";
+
+* {
+  font-family: "Hasklug Nerd Font Propo";
+}
+
+#waybar {
+  background: @bg;
+  color: @fg;
+}
+
+#workspaces button {
+  color: @muted;
+  border-radius: 0;
+}
+
+#workspaces button.active {
+  color: @fg;
+  background: @selected-bg;
+}
+
+#network {
+  margin-right: 12px;
+}

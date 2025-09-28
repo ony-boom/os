@@ -10,6 +10,8 @@
   environment.systemPackages = with pkgs; [
     wget
     curl
+    bottom
+    psmisc # utilities (killall)
 
     gnumake # make
     stow # for dotfiles because hm is annoying
@@ -21,6 +23,7 @@
 
     ghostty
 
+    yaak
     zed-editor
     vscode
 
@@ -28,6 +31,8 @@
   ];
 
   programs = {
+    nm-applet.enable = true;
+    nix-ld.enable = true;
     dconf.enable = true;
     git.enable = true;
   };

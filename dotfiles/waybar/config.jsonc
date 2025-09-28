@@ -1,0 +1,32 @@
+{
+	"height": 34,
+	"spacing": 12,
+	"reload_style_on_change": true,
+
+	"modules-left": ["hyprland/workspaces"],
+
+	"modules-center": ["clock"],
+
+	"modules-right": ["network", "tray"],
+
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": [1, 2, 3]
+		}
+	},
+
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format": "{:%a, %b %d • %H:%M}"
+	},
+
+	"network": {
+		"interval": 5,
+		"format": "↑ {bandwidthUpBits} | ↓ {bandwidthDownBits}"
+	},
+
+	"tray": {
+		"icon-size": 21,
+		"spacing": 12
+	}
+}

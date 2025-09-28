@@ -11,6 +11,8 @@
 
     typescript-language-server
     vscode-langservers-extracted
+
+    python313Packages.python-lsp-server
   ];
 
   formatter = with pkgs; [

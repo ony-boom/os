@@ -1,16 +1,18 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.hyprland.enable = true;
 
   environment.systemPackages = with pkgs; [
-    rofi
     swww
+
     mako
     libnotify
+
+    rofi
     cliphist
+
     satty
+
+    waybar
   ];
 
   xdg.portal = {
