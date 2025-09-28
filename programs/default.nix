@@ -19,7 +19,9 @@
     google-chrome
 
     ghostty
+
     zed-editor
+    vscode
 
     wl-clipboard
   ];

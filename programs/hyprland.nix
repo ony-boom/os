@@ -9,6 +9,8 @@
     swww
     mako
     libnotify
+    cliphist
+    satty
   ];
 
   xdg.portal = {

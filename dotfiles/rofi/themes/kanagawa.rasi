@@ -1,0 +1,7 @@
+* {
+  bg: rgba(24, 22, 22, 1);
+  fg: rgba(197, 201, 197, 1);
+  bordercolor: rgba(196, 178, 138, 0.1);
+  selected-background: rgba(197, 201, 197, 0.04);
+  placeholder-color: rgba(113, 124, 124, 1);
+}
