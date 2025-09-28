@@ -3,6 +3,7 @@
     ./hyprland.nix
     ./neovim.nix
     ./terminal.nix
+    ./distrobox.nix
   ];
 
   # base packages
