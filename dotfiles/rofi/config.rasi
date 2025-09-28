@@ -3,4 +3,6 @@ configuration {
   display-drun: "";
 }
 
-@theme "gruvbox-dark"
+@theme "kanagawa"
+
+@import "base"
