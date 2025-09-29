@@ -4,6 +4,7 @@
     ./neovim.nix
     ./terminal.nix
     ./distrobox.nix
+    ./programming.nix
   ];
 
   # base packages
