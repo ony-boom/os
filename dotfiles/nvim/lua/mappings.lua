@@ -20,3 +20,7 @@ end, { desc = "Buffers", silent = true })
 vim.keymap.set("n", "<leader>lf", function()
 	require("conform").format({ async = true })
 end, { desc = "Format document", silent = true })
+
+vim.keymap.set("n", "<leader>fw", function()
+	Snacks.picker.grep()
+end, { desc = "Grep", silent = true })

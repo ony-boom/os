@@ -7,8 +7,11 @@
     nil
     nixd
 
+    biome
     lua-language-server
 
+    emmet-language-server
+    tailwindcss-language-server
     typescript-language-server
     vscode-langservers-extracted
 
@@ -17,7 +20,6 @@
 
   formatter = with pkgs; [
     stylua
-    biome
     alejandra
     prettierd
   ];

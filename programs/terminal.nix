@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    ripgrep
     eza # ls but wit icons
     starship # prompt
 

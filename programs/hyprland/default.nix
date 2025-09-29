@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  imports = [
+    ./utils
+  ];
+
   programs.hyprland.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -9,8 +13,6 @@
 
     rofi
     cliphist
-
-    satty
 
     waybar
   ];

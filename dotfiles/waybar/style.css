@@ -17,6 +17,7 @@
 #workspaces button.active {
   color: @fg;
   background: @selected-bg;
+  border: solid 1px @selected-bg;
 }
 
 #network {
