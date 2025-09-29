@@ -20,6 +20,6 @@
   border: solid 1px @selected-bg;
 }
 
-#network {
+#network, #tray {
   margin-right: 12px;
 }

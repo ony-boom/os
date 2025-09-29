@@ -2,6 +2,7 @@ configuration {
   show-icons: true;
   display-drun: "";
   display-clipboard: "";
+  icon-theme: "Colloid";
 }
 
 @theme "kanagawa"

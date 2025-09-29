@@ -15,6 +15,9 @@
     cliphist
 
     waybar
+    networkmanagerapplet
+
+    nwg-look
   ];
 
   xdg.portal = {

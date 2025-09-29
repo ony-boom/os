@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hyprland
+    ./theming.nix
     ./neovim.nix
     ./terminal.nix
     ./distrobox.nix
