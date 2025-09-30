@@ -12,3 +12,5 @@ vim.o.smartindent = true
 vim.opt.foldlevel = 99
 
 vim.undofile = true
+
+vim.opt.fillchars:append { eob = " " }
