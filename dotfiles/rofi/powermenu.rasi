@@ -1,0 +1,41 @@
+@theme "kanagawa"
+
+configuration {
+  location: 2;
+  fullscreen: false;
+}
+
+* {
+  background-color: transparent;
+}
+
+window {
+  width: 350px;
+  background-color: @bg;
+  border-color: @bordercolor;
+}
+
+listview {
+  columns: 5;
+  lines: 1;
+}
+
+mainbox {
+  children: ["message", "listview"];
+}
+
+element {
+  padding: 12px;
+}
+
+element.selected {
+  border: 1px;
+  background-color: @selected-background;
+  border-color: @bordercolor;
+}
+
+element-text {
+  color: @fg;
+  font: "monspace 18";
+  horizontal-align:            0.4;
+}
