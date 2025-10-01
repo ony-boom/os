@@ -27,7 +27,9 @@
 
     yaak
     zed-editor
-    vscode
+
+    vlc
+    spotify
 
     wl-clipboard
   ];
