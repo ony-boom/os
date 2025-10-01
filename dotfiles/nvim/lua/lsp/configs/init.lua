@@ -1,2 +1,4 @@
 require("lsp.configs.lua_ls")
 require("lsp.configs.ts_ls")
+require("lsp.configs.cssls")
+require("lsp.configs.jsonls")

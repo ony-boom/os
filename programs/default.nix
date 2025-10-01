@@ -38,6 +38,7 @@
   ];
 
   programs = {
+    firefox.enable = true;
     nm-applet.enable = true;
     nix-ld.enable = true;
     dconf.enable = true;
