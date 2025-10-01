@@ -12,6 +12,7 @@
 #workspaces button {
   color: @muted;
   border-radius: 0;
+  border: solid 1px transparent;
 }
 
 #workspaces button.active {
