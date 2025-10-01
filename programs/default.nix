@@ -19,6 +19,7 @@
     stow # for dotfiles because hm is annoying
 
     nautilus # file manager
+    shotwell
 
     emote
     google-chrome
