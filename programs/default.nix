@@ -20,6 +20,7 @@
 
     nautilus # file manager
     shotwell
+    cheese
 
     emote
     google-chrome
@@ -29,6 +30,7 @@
     yaak
     zed-editor
 
+    pavucontrol
     vlc
     spotify
 
