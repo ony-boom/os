@@ -15,7 +15,9 @@
     nixosConfigurations.maki = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./configuration.nix
+        ./config
+        ./programs
+        ./hardware-configuration.nix
       ];
     };
   };

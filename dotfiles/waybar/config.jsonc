@@ -1,5 +1,5 @@
 {
-	"height": 34,
+	"height": 38,
 	"spacing": 12,
 	"reload_style_on_change": true,
 
@@ -7,13 +7,19 @@
 
 	"modules-center": ["clock"],
 
-	"modules-right": ["network", "tray"],
+	"modules-right": ["hyprland/language", "network", "tray"],
 
 	"hyprland/workspaces": {
 		"persistent-workspaces": {
 			"*": [1, 2, 3]
 		}
 	},
+
+	"hyprland/language": {
+    "format": "󰥻 {}",
+    "format-en": "English",
+    "format-en-intl": "English (intl)"
+  },
 
 	"clock": {
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
