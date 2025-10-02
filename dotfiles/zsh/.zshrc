@@ -1,6 +1,3 @@
-# Lazy to configure prompt
-eval "$(starship init zsh)"
-
 alias ls='eza --icons=always'
 alias lg='lazygit'
 
@@ -14,3 +11,7 @@ export GOPATH="$HOME/go"
 export XDG_BIN_HOME="$HOME/.local/bin"
 
 export PATH="$PATH:$XDG_BIN_HOME:$GOPATH/bin:$PNPM_HOME:$BUN_BIN"
+
+# Lazy to configure prompt
+eval "$(starship init zsh)"
+eval "$(atuin init zsh)"

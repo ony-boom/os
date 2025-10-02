@@ -38,6 +38,7 @@
   ];
 
   programs = {
+    localsend.enable = true;
     firefox.enable = true;
     nm-applet.enable = true;
     nix-ld.enable = true;

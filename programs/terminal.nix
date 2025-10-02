@@ -8,7 +8,11 @@
 
     openssl # some apps depends on it
     yazi
+
+    atuin
   ];
+
+  # services.atuin.enable = true;
 
   programs = {
     zoxide.enable = true;
