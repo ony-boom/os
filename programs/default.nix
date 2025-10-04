@@ -31,7 +31,7 @@
     zed-editor
 
     pavucontrol
-    pasystray
+    # pasystray
     vlc
     spotify
 
