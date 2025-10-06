@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    jq
     ripgrep
     eza # ls but wit icons
     starship # prompt
@@ -10,6 +11,7 @@
     yazi
 
     atuin
+    fzf
   ];
 
   # services.atuin.enable = true;

@@ -4,6 +4,8 @@
   ...
 }: let
   lsp = with pkgs; [
+    gopls
+
     nil
     nixd
 
@@ -19,6 +21,7 @@
   ];
 
   formatter = with pkgs; [
+    gofumpt
     stylua
     alejandra
     prettierd

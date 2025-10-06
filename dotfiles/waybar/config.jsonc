@@ -1,38 +1,46 @@
 {
-	"height": 38,
-	"spacing": 12,
-	"reload_style_on_change": true,
+  "height": 38,
+  "spacing": 12,
+  "reload_style_on_change": true,
 
-	"modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
 
-	"modules-center": ["clock"],
+  "modules-center": ["clock"],
 
-	"modules-right": ["hyprland/language", "network", "tray"],
+  "modules-right": ["network", "hyprland/language", "wireplumber", "tray"],
 
-	"hyprland/workspaces": {
-		"persistent-workspaces": {
-			"*": [1, 2, 3]
-		}
-	},
-
-	"hyprland/language": {
-    "format": "󰥻 {}",
-    "format-en": "English",
-    "format-en-intl": "English (intl)"
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": [1, 2, 3],
+    },
   },
 
-	"clock": {
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format": "{:%a, %b %d • %H:%M}"
-	},
+  "hyprland/language": {
+    "format": "󰥻 {}",
+    "format-en": "English",
+    "format-en-intl": "English (intl)",
+  },
 
-	"network": {
-		"interval": 5,
-		"format": "↑ {bandwidthUpBits} | ↓ {bandwidthDownBits}"
-	},
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%a, %b %d • %H:%M}",
+  },
 
-	"tray": {
-		"icon-size": 21,
-		"spacing": 12
-	}
+  "network": {
+    "interval": 5,
+    "format": "↑ {bandwidthUpBits} | ↓ {bandwidthDownBits}",
+  },
+
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟  ",
+    "on-click": "pavucontrol",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "scroll-step": 0.2,
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 12,
+  },
 }

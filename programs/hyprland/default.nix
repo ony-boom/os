@@ -23,12 +23,13 @@
     nwg-look
   ];
 
-  # xdg.portal = {
-  #   enable = true;
-  #   extraPortals = with pkgs; [
-  #     xdg-desktop-portal-gtk
-  #   ];
-  # };
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+    ];
+  };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     description = "polkit-gnome-authentication-agent-1";

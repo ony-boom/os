@@ -15,6 +15,9 @@
     bottom
     psmisc # utilities (killall)
 
+    gtk3 # gtk lib
+    gnome-themes-extra
+
     gnumake # make
     stow # for dotfiles because hm is annoying
 
@@ -30,11 +33,13 @@
     yaak
     zed-editor
 
+    indicator-sound-switcher
     pavucontrol
-    # pasystray
+
     vlc
     spotify
 
+    scrcpy
     wl-clipboard
   ];
 

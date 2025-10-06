@@ -1,37 +1,47 @@
 @import "./colors/kanagawa-dragon.css";
 
 * {
-  font-family: "Hasklug Nerd Font Propo";
-  font-weight: 600;
+    font-family: "Hasklug Nerd Font Propo";
+    font-weight: 600;
 }
 
 #waybar {
-  background: @bg;
-  color: @fg;
+    background: @bg;
+    color: @fg;
 }
 
 #workspaces button {
-  color: @muted;
-  border-radius: 0;
-  border: solid 1px transparent;
-  transition: all .3s;
+    color: @muted;
+    border-radius: 0;
+    border: solid 1px transparent;
+    transition: all 0.3s;
 }
 
 #workspaces button.active {
-  color: @fg;
-  background: @selected-bg;
-  border: solid 1px @border;
+    color: @fg;
+    background: @selected-bg;
+    border: solid 1px @border;
 }
 
-#network, #language, #tray {
-  padding: 0 12px;
+#network,
+#language,
+#tray,
+#wireplumber {
+    padding: 0 12px;
 }
 
 #language {
-  color: @yellow;
+    color: @yellow;
+}
+
+#wireplumber {
+    color: @cyan;
+}
+
+#wireplumber.muted {
+    color: @red;
 }
 
 #tray {
-  background: @selected-bg;
+    background: @selected-bg;
 }
-
