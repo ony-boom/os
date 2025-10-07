@@ -25,6 +25,7 @@
   };
 
   services.displayManager.gdm.enable = true;
+  services.flatpak.enable = true;
 
   # sound
   services.pipewire = {

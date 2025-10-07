@@ -9,5 +9,7 @@
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
 
     ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
+
+    XDG_DATA_DIRS = ["/var/lib/flatpak/exports/share" "$XDG_DATA_HOME/flatpak/exports/share"];
   };
 }
