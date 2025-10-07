@@ -2,7 +2,7 @@
   imports = [
     ./nix.nix
     ./nvidia.nix
-    ./services.nix
+    ./services
     ./env.nix
     ./user.nix
   ];

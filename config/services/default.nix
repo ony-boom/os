@@ -1,5 +1,8 @@
 {
-  # Enable touchpad support (enabled default in most desktopManager).
+  imports = [
+    ./gnome-keyring.nix
+  ];
+  # Enable touchpad support (enabled default in most desktopManager)
   # services.libinput.enable = true;
 
   # disks
@@ -20,10 +23,8 @@
       options = "grp:win_space_toggle";
     };
   };
-  services.displayManager.gdm.enable = true;
 
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.gdm.enableGnomeKeyring = true;
+  services.displayManager.gdm.enable = true;
 
   # sound
   services.pipewire = {
