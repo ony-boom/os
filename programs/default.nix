@@ -15,7 +15,6 @@
     bottom
     psmisc # utilities (killall)
 
-    gtk3 # gtk lib
     gnome-themes-extra
 
     gnumake # make
@@ -38,13 +37,15 @@
 
     vlc
     spotify
+    obs-studio
 
     scrcpy
     wl-clipboard
   ];
 
   programs = {
-    localsend.enable = true;
+    kdeconnect.enable = true;
+    # localsend.enable = true;
     firefox.enable = true;
     nm-applet.enable = true;
     nix-ld.enable = true;
