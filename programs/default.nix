@@ -47,6 +47,7 @@
   ];
 
   programs = {
+    seahorse.enable = true;
     kdeconnect.enable = true;
     # localsend.enable = true;
     firefox.enable = true;
