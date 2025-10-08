@@ -6,6 +6,7 @@
     ./terminal.nix
     ./distrobox.nix
     ./programming.nix
+    ./steam.nix
   ];
 
   # base packages
@@ -41,6 +42,8 @@
 
     scrcpy
     wl-clipboard
+
+    lmms
   ];
 
   programs = {
