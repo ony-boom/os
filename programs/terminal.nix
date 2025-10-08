@@ -12,6 +12,8 @@
 
     atuin
     fzf
+
+    zsh-vi-mode
   ];
 
   # services.atuin.enable = true;
@@ -23,6 +25,9 @@
       enable = true;
       enableCompletion = true;
       ohMyZsh.enable = true;
+      interactiveShellInit = ''
+        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+      '';
       syntaxHighlighting.enable = true;
     };
   };
