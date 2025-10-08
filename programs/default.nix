@@ -49,7 +49,6 @@
   programs = {
     seahorse.enable = true;
     kdeconnect.enable = true;
-    # localsend.enable = true;
     firefox.enable = true;
     nm-applet.enable = true;
     nix-ld.enable = true;

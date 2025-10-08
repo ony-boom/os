@@ -24,3 +24,11 @@ end, { desc = "Format document", silent = true })
 vim.keymap.set("n", "<leader>fw", function()
 	Snacks.picker.grep()
 end, { desc = "Grep", silent = true })
+
+vim.keymap.set("n", "<leader>fo", function()
+	Snacks.picker.recent()
+end, { desc = "recent file", silent = true })
+
+vim.keymap.set("n", '"', function()
+	Snacks.picker.registers()
+end, { desc = "Registers", silent = true })
