@@ -2,8 +2,10 @@
   environment.systemPackages = with pkgs; [
     jq
     ripgrep
+
     eza # ls but wit icons
     starship # prompt
+    cava
 
     gh # github cli tool
 

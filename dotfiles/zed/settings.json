@@ -34,5 +34,6 @@
   "icon_theme": {
     "dark": "JetBrains New UI Icons (Dark)",
     "light": "JetBrains New UI Icons (Light)"
-  }
+  },
+  "format_on_save": "off"
 }
