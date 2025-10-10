@@ -11,36 +11,36 @@
 
   "hyprland/workspaces": {
     "persistent-workspaces": {
-      "*": [1, 2, 3],
-    },
+      "*": [1, 2, 3]
+    }
   },
 
   "hyprland/language": {
     "format": "󰥻 {}",
     "format-en": "English",
-    "format-en-intl": "English (intl)",
+    "format-en-intl": "English (intl)"
   },
 
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a, %b %d • %H:%M}",
+    "format": "{:%a, %b %d • %H:%M}"
   },
 
   "network": {
     "interval": 5,
-    "format": "↑ {bandwidthUpBits} | ↓ {bandwidthDownBits}",
+    "format": "↑ {bandwidthUpBits} | ↓ {bandwidthDownBits}"
   },
 
   "wireplumber": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟  ",
+    "format-muted": "muted",
     "on-click": "pavucontrol",
     "format-icons": ["󰕿", "󰖀", "󰕾"],
-    "scroll-step": 0.2,
+    "scroll-step": 0.2
   },
 
   "tray": {
     "icon-size": 21,
-    "spacing": 12,
-  },
+    "spacing": 12
+  }
 }

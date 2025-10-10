@@ -1,19 +1,20 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    jq
-    ripgrep
-
+    atuin
     eza # ls but wit icons
     starship # prompt
     cava
+    fastfetch
 
     gh # github cli tool
 
     openssl # some apps depends on it
     yazi
 
-    atuin
+    jq
+    ripgrep
     fzf
+    fd
 
     zsh-vi-mode
   ];
