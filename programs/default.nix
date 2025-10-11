@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  stable-pkgs,
+  ...
+}: {
   imports = [
     ./hyprland
     ./theming.nix
@@ -10,46 +14,53 @@
   ];
 
   # base packages
-  environment.systemPackages = with pkgs; [
-    wget
-    curl
-    bottom
-    psmisc # utilities (killall)
+  environment.systemPackages = with pkgs;
+    [
+      wget
+      curl
+      bottom
 
-    gnome-themes-extra
+      gnome-themes-extra
 
-    gnumake # make
-    stow # for dotfiles because hm is annoying
+      gnumake # make
+      stow # for dotfiles because hm is annoying
 
-    nautilus # file manager
-    shotwell
-    cheese
+      nautilus # file manager
+      shotwell
+      cheese
 
-    emote
-    google-chrome
+      emote
+      google-chrome
 
-    ghostty
+      ghostty
 
-    yaak
-    zed-editor
+      yaak
+      zed-editor
 
-    indicator-sound-switcher
-    pavucontrol
+      indicator-sound-switcher
+      pavucontrol
 
-    vlc
-    spotify
-    obs-studio
+      vlc
+      spotify
+      obs-studio
 
-    scrcpy
-    wl-clipboard
+      scrcpy
+      wl-clipboard
 
-    lmms
-  ];
+      playerctl
+
+      vicinae
+    ]
+    ++ (
+      with stable-pkgs; [
+        lmms
+      ]
+    );
 
   programs = {
     seahorse.enable = true;
     kdeconnect.enable = true;
-    firefox.enable = true;
+    # firefox.enable = true;
     nm-applet.enable = true;
     nix-ld.enable = true;
     dconf.enable = true;
