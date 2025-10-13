@@ -3,7 +3,7 @@ text-color=#c5c9c5
 border-color=#c4b28a33
 progress-color=over #c5c9c50a
 
-border-radius=0
+border-radius=4
 default-timeout=6000
 
 [urgency=high]

@@ -37,7 +37,7 @@
       yaak
       zed-editor
 
-      indicator-sound-switcher
+      # indicator-sound-switcher
       pavucontrol
 
       vlc
