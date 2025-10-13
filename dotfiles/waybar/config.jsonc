@@ -1,6 +1,7 @@
 {
   "height": 38,
   "spacing": 12,
+  "margin": "6 12 4 12",
   "reload_style_on_change": true,
 
   "modules-left": ["hyprland/workspaces"],

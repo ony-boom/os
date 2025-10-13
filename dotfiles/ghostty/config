@@ -6,7 +6,7 @@ theme = Kanagawa Dragon
 
 window-padding-y = 10
 window-padding-x = 12
-background-opacity = 0.85
+background-opacity = 0.90
 
 gtk-titlebar = false
 window-decoration = none
