@@ -30,6 +30,7 @@
       cheese
 
       emote
+      icon-library
       google-chrome
 
       ghostty
@@ -38,6 +39,7 @@
       zed-editor
 
       # indicator-sound-switcher
+      swoosh
       pavucontrol
 
       vlc

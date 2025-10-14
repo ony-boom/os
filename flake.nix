@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    swoosh = {
+      url = "github:ony-boom/swoosh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     vicinae.url = "github:vicinaehq/vicinae";
   };
 
@@ -28,6 +33,9 @@
         {
           nixpkgs.overlays = [
             inputs.vicinae.overlays.default
+            (self: super: {
+              swoosh = inputs.swoosh.packages.${system}.default;
+            })
           ];
         }
         ./config
