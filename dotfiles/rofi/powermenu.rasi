@@ -12,7 +12,6 @@ configuration {
 window {
   width: 350px;
   background-color: @bg;
-  border-radius: 6px;
   border-color: @bordercolor;
 }
 
@@ -26,7 +25,6 @@ mainbox {
 }
 
 element {
-  border-radius: 6px;
   padding: 18px 12px;
 }
 

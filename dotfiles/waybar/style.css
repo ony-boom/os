@@ -6,14 +6,12 @@
 }
 
 #waybar {
-    border-radius: 6px;
     background: @bg;
     color: @fg;
 }
 
 #workspaces button {
     color: @muted;
-    border-radius: 6px;
     border: solid 1px transparent;
     transition: all 0.3s;
 }
