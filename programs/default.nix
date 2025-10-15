@@ -40,6 +40,7 @@
 
       # indicator-sound-switcher
       swoosh
+      pactl
       pavucontrol
 
       vlc
