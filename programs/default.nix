@@ -60,6 +60,7 @@
     );
 
   programs = {
+    zoom-us.enable = true;
     seahorse.enable = true;
     kdeconnect.enable = true;
     # firefox.enable = true;
