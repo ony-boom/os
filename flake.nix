@@ -16,6 +16,7 @@
     };
 
     vicinae.url = "github:vicinaehq/vicinae";
+    mango.url = "github:DreamMaoMao/mango";
   };
 
   outputs = inputs @ {
@@ -24,7 +25,10 @@
     ...
   }: let
     system = "x86_64-linux";
-    stable-pkgs = import inputs.nixpkgs-stable {inherit system;};
+    stable-pkgs = import inputs.nixpkgs-stable {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     nixosConfigurations.maki = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -33,11 +37,11 @@
         {
           nixpkgs.overlays = [
             inputs.vicinae.overlays.default
-            (self: super: {
-              swoosh = inputs.swoosh.packages.${system}.default;
-            })
           ];
         }
+
+        inputs.mango.nixosModules.mango
+        inputs.swoosh.nixosModules.${system}.default
         ./config
         ./programs
         ./hardware-configuration.nix

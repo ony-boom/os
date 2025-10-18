@@ -24,7 +24,9 @@
     };
   };
 
-  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm = {
+    enable = true;
+  };
   services.flatpak.enable = true;
 
   # sound

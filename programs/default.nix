@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./hyprland
+    ./wm
     ./theming.nix
     ./neovim.nix
     ./terminal.nix
@@ -35,11 +35,11 @@
 
       ghostty
 
-      yaak
+      bruno
       zed-editor
+      obsidian
 
       # indicator-sound-switcher
-      swoosh
       pavucontrol
 
       vlc
@@ -52,6 +52,7 @@
       playerctl
 
       vicinae
+      prismlauncher
     ]
     ++ (
       with stable-pkgs; [
@@ -60,6 +61,7 @@
     );
 
   programs = {
+    swoosh.enable = true;
     zoom-us.enable = true;
     seahorse.enable = true;
     kdeconnect.enable = true;

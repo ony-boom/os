@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, ...}: rec {
   imports = [
     ./utils
   ];
@@ -7,6 +7,8 @@
     enable = true;
     withUWSM = true;
   };
+
+  programs.mango.enable = !programs.hyprland.enable; 
 
   environment.systemPackages = with pkgs; [
     swww
