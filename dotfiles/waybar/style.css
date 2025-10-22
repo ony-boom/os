@@ -12,12 +12,14 @@
 
 #workspaces button {
     color: @muted;
-    border: solid 1px transparent;
+    border-radius: 0;
     transition: all 0.3s;
+    border: solid 1px transparent;
 }
 
 #workspaces button.active {
     color: @fg;
+    border: solid 1px @border;
 }
 
 #network,

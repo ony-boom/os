@@ -20,7 +20,8 @@
       curl
       bottom
 
-      gnome-themes-extra
+      glib
+      gsettings-desktop-schemas
 
       gnumake # make
       stow # for dotfiles because hm is annoying

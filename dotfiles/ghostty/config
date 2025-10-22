@@ -2,7 +2,7 @@ shell-integration = zsh
 font-family = Hasklug Nerd Font Mono
 
 font-size = 15
-theme = Kanagawa Dragon
+theme = dark:kanagawa-dragon,light:kanagawa-lotus
 
 window-padding-y = 10
 window-padding-x = 12

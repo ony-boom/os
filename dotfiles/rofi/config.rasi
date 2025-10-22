@@ -5,6 +5,6 @@ configuration {
   icon-theme: "Colloid-Gruvbox";
 }
 
-@theme "kanagawa"
+@theme "kanagawa-dragon"
 
 @import "base"
