@@ -30,7 +30,7 @@
       shotwell
       cheese
 
-      emote
+      # emote
       icon-library
       google-chrome
 
