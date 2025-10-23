@@ -1,6 +1,7 @@
 {
   pkgs,
   stable-pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -53,7 +54,7 @@
       playerctl
 
       vicinae
-      prismlauncher
+      inputs.matugen.packages.${system}.default
     ]
     ++ (
       with stable-pkgs; [
