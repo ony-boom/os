@@ -8,4 +8,5 @@ return {
 	"biome",
 	"tailwindcss",
 	"emmet_language_server",
+  "qmlls"
 }

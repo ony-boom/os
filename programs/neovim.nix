@@ -30,6 +30,7 @@ in {
   environment.systemPackages = with pkgs;
     [
       gcc
+      kdePackages.qtdeclarative
       tree-sitter
     ]
     ++ lsp ++ formatter;
