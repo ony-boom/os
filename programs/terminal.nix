@@ -22,6 +22,7 @@
   # services.atuin.enable = true;
 
   programs = {
+    mosh.enable = true;
     zoxide.enable = true;
     lazygit.enable = true;
     zsh = {
