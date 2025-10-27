@@ -25,8 +25,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    agenix.url = "github:ryantm/agenix";
+
     vicinae.url = "github:vicinaehq/vicinae";
-    mango.url = "github:DreamMaoMao/mango";
   };
 
   outputs = inputs @ {
@@ -47,11 +53,17 @@
         {
           nixpkgs.overlays = [
             inputs.vicinae.overlays.default
+            inputs.agenix.overlays.default
+            (prev: final: {
+              matugen = inputs.matugen.packages.${system}.default;
+              zen-browser = inputs.zen-browser.packages.${system}.default;
+            })
           ];
         }
 
-        inputs.mango.nixosModules.mango
+        inputs.agenix.nixosModules.default
         inputs.swoosh.nixosModules.${system}.default
+
         ./config
         ./programs
         ./hardware-configuration.nix

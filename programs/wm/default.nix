@@ -1,4 +1,4 @@
-{pkgs, ...}: rec {
+{pkgs, ...}: {
   imports = [
     ./utils
     ./quickshell.nix
@@ -9,7 +9,6 @@
     withUWSM = true;
   };
 
-  programs.mango.enable = !programs.hyprland.enable; 
 
   environment.systemPackages = with pkgs; [
     swww

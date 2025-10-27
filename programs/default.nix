@@ -1,7 +1,6 @@
 {
   pkgs,
   stable-pkgs,
-  inputs,
   ...
 }: {
   imports = [
@@ -21,9 +20,6 @@
       curl
       bottom
 
-      glib
-      gsettings-desktop-schemas
-
       gnumake # make
       stow # for dotfiles because hm is annoying
 
@@ -34,6 +30,7 @@
       # emote
       icon-library
       google-chrome
+      zen-browser
 
       ghostty
 
@@ -46,6 +43,7 @@
 
       vlc
       spotify
+      amberol
       obs-studio
 
       scrcpy
@@ -54,7 +52,8 @@
       playerctl
 
       vicinae
-      inputs.matugen.packages.${system}.default
+      agenix
+      matugen
     ]
     ++ (
       with stable-pkgs; [
@@ -64,12 +63,16 @@
 
   programs = {
     swoosh.enable = true;
-    zoom-us.enable = true;
     seahorse.enable = true;
     kdeconnect.enable = true;
     # firefox.enable = true;
     nm-applet.enable = true;
-    nix-ld.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc
+      ];
+    };
     dconf.enable = true;
     git.enable = true;
   };
