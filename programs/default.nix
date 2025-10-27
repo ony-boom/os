@@ -43,7 +43,6 @@
 
       vlc
       spotify
-      amberol
       obs-studio
 
       scrcpy
