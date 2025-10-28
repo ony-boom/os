@@ -465,11 +465,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760953402,
-        "narHash": "sha256-VbzMRmjW+fj0THW/8gjFq96Em5NOI0NJTVlyrogreeQ=",
+        "lastModified": 1761644065,
+        "narHash": "sha256-sqVw51SEwLb7g6QaJvYgb/wBCABOb+/XaOHSpauWOmI=",
         "owner": "ony-boom",
         "repo": "swoosh",
-        "rev": "d3c86e193c13e09231ad04d2aeb26e1d57378862",
+        "rev": "93c67b5fbafb2311437be9eb6717ab6e18934da3",
         "type": "github"
       },
       "original": {

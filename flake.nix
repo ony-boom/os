@@ -62,7 +62,7 @@
         }
 
         inputs.agenix.nixosModules.default
-        inputs.swoosh.nixosModules.${system}.default
+        inputs.swoosh.nixosModules.default
 
         ./config
         ./programs
