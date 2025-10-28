@@ -36,7 +36,7 @@
 
       bruno
       zed-editor
-      obsidian
+      affine
 
       # indicator-sound-switcher
       pavucontrol
