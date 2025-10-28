@@ -5,19 +5,8 @@
     ./services
     ./env.nix
     ./user.nix
+    ./boot.nix
   ];
-
-  boot.loader.grub = {
-    enable = true;
-    useOSProber = true;
-    extraConfig = ''
-      GRUB_TIMEOUT=10
-    '';
-  };
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "maki"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
