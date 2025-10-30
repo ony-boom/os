@@ -1,6 +1,7 @@
 {
   imports = [
     ./gnome-keyring.nix
+    ./vicinae.nix
   ];
   # Enable touchpad support (enabled default in most desktopManager)
   # services.libinput.enable = true;
