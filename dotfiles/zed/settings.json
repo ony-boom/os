@@ -38,6 +38,17 @@
 	"format_on_save": "off",
 	"tab_size": 2,
 	"hard_tabs": true,
+	"languages": {
+		"JavaScript": {
+			"tab_size": 2
+		},
+		"TypeScript": {
+			"tab_size": 2
+		},
+		"TSX": {
+			"tab_size": 2
+		}
+	},
 	"lsp": {
 		"vscode-html-language-server": {
 			"binary": {

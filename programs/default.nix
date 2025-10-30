@@ -44,6 +44,7 @@
       vlc
       spotify
       obs-studio
+      gimp2
 
       scrcpy
       wl-clipboard
