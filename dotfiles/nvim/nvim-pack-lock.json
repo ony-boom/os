@@ -1,0 +1,18 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "version": "'v1.7.0'"
+    },
+    "conform.nvim": [],
+    "friendly-snippets": [],
+    "kanagawa.nvim": [],
+    "mini.icons": [],
+    "nvim-autopairs": [],
+    "nvim-lspconfig": [],
+    "nvim-treesitter": {
+      "version": "'master'"
+    },
+    "schemastore.nvim": [],
+    "snacks.nvim": []
+  }
+}

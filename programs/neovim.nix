@@ -12,6 +12,7 @@
     biome
     lua-language-server
 
+    astro-language-server
     emmet-language-server
     tailwindcss-language-server
     typescript-language-server
