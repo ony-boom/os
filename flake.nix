@@ -48,7 +48,7 @@
   in {
     nixosConfigurations.maki = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = {inherit inputs stable-pkgs;};
+      specialArgs = {inherit self inputs stable-pkgs;};
       modules = [
         {
           nixpkgs.overlays = [

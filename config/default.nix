@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./age.nix
     ./nix.nix
     ./nvidia.nix
     ./services
