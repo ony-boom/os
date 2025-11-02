@@ -15,7 +15,7 @@
 
       TERMINAL = "ghostty";
 
-      CACHIX_AUTH_TOKEN = "$(cat ${config.age.secrets.cachix-auth.token.path})";
+      CACHIX_AUTH_TOKEN = "$(cat ${config.age.secrets.cachix-auth-token.path})";
     };
   };
 }
