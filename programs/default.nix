@@ -45,6 +45,7 @@
       spotify
       obs-studio
       gimp2
+      davinci-reslove
 
       scrcpy
       wl-clipboard
@@ -54,6 +55,8 @@
       vicinae
       agenix
       matugen
+
+      quickemu
     ]
     ++ (
       with stable-pkgs; [

@@ -19,6 +19,7 @@
     typescript-language-server
     vscode-langservers-extracted
 
+    angular-language-server
     python313Packages.python-lsp-server
   ];
 
@@ -32,7 +33,6 @@ in {
   environment.systemPackages = with pkgs;
     [
       gcc
-      kdePackages.qtdeclarative
       tree-sitter
     ]
     ++ lsp ++ formatter;

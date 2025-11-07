@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./utils
-    ./quickshell.nix
   ];
 
   programs.hyprland = {
