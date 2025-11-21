@@ -18,6 +18,12 @@
     [
       wget
       curl
+      ffmpeg
+
+      # thumbnail things
+      imagemagick
+      ffmpegthumbnailer
+
       bottom
 
       gnumake # make
@@ -45,18 +51,21 @@
       spotify
       obs-studio
       gimp2
-      davinci-reslove
+      kdePackages.kdenlive
+      blanket
+      # davinci-resolve
 
       scrcpy
       wl-clipboard
 
       playerctl
 
-      vicinae
       agenix
       matugen
+      vicinae
 
-      quickemu
+      zapzap
+      quickemu # emu
     ]
     ++ (
       with stable-pkgs; [
