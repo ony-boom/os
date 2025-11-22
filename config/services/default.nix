@@ -30,6 +30,8 @@
   };
   services.flatpak.enable = true;
 
+  services.blueman.enable = true;
+
   # sound
   services.pipewire = {
     enable = true;

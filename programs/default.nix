@@ -64,8 +64,7 @@
       matugen
       vicinae
 
-      zapzap
-      quickemu # emu
+      quickemu # VM and stuff
     ]
     ++ (
       with stable-pkgs; [
