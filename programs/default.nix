@@ -45,6 +45,7 @@
       affine
 
       # indicator-sound-switcher
+      blueberry
       pavucontrol
 
       vlc
