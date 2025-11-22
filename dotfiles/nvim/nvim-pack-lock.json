@@ -7,6 +7,10 @@
     "friendly-snippets": [],
     "kanagawa.nvim": [],
     "mini.icons": [],
+    "nvim": {
+      "rev": "da33755",
+      "src": "https://github.com/catppuccin/nvim"
+    },
     "nvim-autopairs": [],
     "nvim-lspconfig": [],
     "nvim-treesitter": {

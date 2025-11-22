@@ -1,5 +1,6 @@
 require("options")
 require("plugins")
+require("themes")
 require("configs")
 require("lsp")
 require("mappings")
