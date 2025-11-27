@@ -1,20 +1,19 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  theme = pkgs.sddm-astronaut.override {
+    embeddedTheme = "japanese_aesthetic";
+  };
+in {
+  environment.systemPackages = [
+    pkgs.kdePackages.qtmultimedia
+  ];
+
   services.displayManager.sddm = {
     enable = true;
-    extraPackages = with pkgs; [
-      (
-        sddm-astronaut.override
-        {
-          embeddedTheme = "japanese_aesthetic";
-        }
-      )
+
+    extraPackages = [
+      pkgs.sddm-astronaut
     ];
 
-    theme = "sddm-astronaut-theme";
-    settings = {
-      Theme = {
-        Current = "sddm-astronaut-theme";
-      };
-    };
+    theme = "${theme}/share/sddm/themes/sddm-astronaut-theme";
   };
 }
