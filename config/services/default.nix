@@ -1,6 +1,7 @@
 {
   imports = [
     ./gnome-keyring.nix
+    ./sddm.nix
     ./ollama.nix
   ];
   # Enable touchpad support (enabled default in most desktopManager)
@@ -25,9 +26,6 @@
     };
   };
 
-  services.displayManager.gdm = {
-    enable = true;
-  };
   services.flatpak.enable = true;
 
   # sound
