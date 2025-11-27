@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./utils
+    ./ignis.nix
   ];
 
   programs.hyprland = {

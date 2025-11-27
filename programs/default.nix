@@ -52,6 +52,7 @@
       spotify
       obs-studio
       gimp2
+      # pinta
       kdePackages.kdenlive
       blanket
       # davinci-resolve
@@ -76,8 +77,8 @@
   programs = {
     swoosh.enable = true;
     seahorse.enable = true;
-    kdeconnect.enable = true;
     # firefox.enable = true;
+    localsend.enable = true;
     nm-applet.enable = true;
     nix-ld = {
       enable = true;

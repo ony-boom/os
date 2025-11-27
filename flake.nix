@@ -28,6 +28,11 @@
     agenix.url = "github:ryantm/agenix";
 
     vicinae.url = "github:vicinaehq/vicinae";
+
+    ignis = {
+      url = "github:ignis-sh/ignis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
