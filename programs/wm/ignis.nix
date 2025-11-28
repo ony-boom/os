@@ -8,7 +8,6 @@
       enableAudioService = true;
       useDartSass = true;
       extraPackages = [
-        # ...
       ];
     })
   ];

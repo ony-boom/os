@@ -29,17 +29,19 @@
 
     vicinae.url = "github:vicinaehq/vicinae";
 
-    ignis = {
-      url = "github:ignis-sh/ignis";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # ignis = {
+    #   url = "github:ignis-sh/ignis";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   nixConfig = {
     extra-subtituters = [
+      "https://vicinae.cachix.org"
       "https://cuda-maintainers.cachix.org"
     ];
     extra-trusted-public-keys = [
+      "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
       "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
     ];
   };
