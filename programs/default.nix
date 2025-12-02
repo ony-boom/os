@@ -16,6 +16,7 @@
   # base packages
   environment.systemPackages = with pkgs;
     [
+      dig
       wget
       curl
       ffmpeg

@@ -4,6 +4,7 @@
   ...
 }: let
   lsp = with pkgs; [
+    gotools
     gopls
 
     nil
@@ -40,6 +41,6 @@ in {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    package = inputs.neovim-nightly.packages.${pkgs.system}.default;
+    package = inputs.neovim-nightly.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
 }

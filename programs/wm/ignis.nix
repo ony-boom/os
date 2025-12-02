@@ -4,7 +4,7 @@
   ...
 }: {
   environment.systemPackages = [
-    (inputs.ignis.packages.${pkgs.system}.default.override {
+    (inputs.ignis.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
       enableAudioService = true;
       useDartSass = true;
       extraPackages = [
