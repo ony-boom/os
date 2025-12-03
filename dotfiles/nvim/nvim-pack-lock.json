@@ -53,6 +53,10 @@
     "statuscol.nvim": {
       "rev": "c46172d0911aa5d49ba5f39f4351d1bb7aa289cc",
       "src": "https://github.com/luukvbaal/statuscol.nvim"
+    },
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "38b06435305c30966b7ceb0a43e460dc43acaada",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
     }
   }
 }
