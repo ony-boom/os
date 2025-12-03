@@ -1,4 +1,10 @@
 vim.lsp.config("ts_ls", {
-	single_file_support = false,
-	root_markers = { "package.json", "tsconfig.json" },
+	root_dir = function(bufnr, callback)
+		local deno_dir = vim.fs.root(bufnr, { "deno.json", "deno.jsonc" })
+		local root_dir = vim.fs.root(bufnr, { "tsconfig.json", "jsconfig.json", "package.json" })
+
+		if root_dir and deno_dir == nil then
+			callback(root_dir)
+		end
+	end,
 })

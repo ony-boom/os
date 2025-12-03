@@ -1,4 +1,4 @@
-vim.pack.add({ "stevearc/conform.nvim" })
+vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 
 local web = { "prettierd", "prettier", stop_after_first = true }
 
