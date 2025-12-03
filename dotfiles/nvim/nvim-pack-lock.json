@@ -21,6 +21,10 @@
       "rev": "debe91547d7fb1eef34ce26a5106f277fbfdd109",
       "src": "https://github.com/rebelot/kanagawa.nvim"
     },
+    "lualine.nvim": {
+      "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
     "mini.icons": {
       "rev": "e8fae66cb400744daeedf6e387347df50271c252",
       "src": "https://github.com/nvim-mini/mini.icons"
