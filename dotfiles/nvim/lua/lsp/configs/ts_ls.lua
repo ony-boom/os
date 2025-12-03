@@ -1,4 +1,4 @@
 vim.lsp.config("ts_ls", {
 	single_file_support = false,
-	root_markers = { "package.json" },
+	root_markers = { "package.json", "tsconfig.json" },
 })

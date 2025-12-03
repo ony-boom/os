@@ -10,5 +10,6 @@ return {
 	"emmet_language_server",
 	"astro",
 	"svelte",
-  "angularls"
+  "angularls",
+  "denols"
 }
