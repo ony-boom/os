@@ -33,6 +33,7 @@
       nautilus # file manager
       shotwell
       cheese
+      gnome-disk-utility
 
       # emote
       icon-library
@@ -45,7 +46,6 @@
       zed-editor
       affine
 
-      # indicator-sound-switcher
       blueberry
       pavucontrol
 
@@ -53,10 +53,8 @@
       spotify
       obs-studio
       gimp2
-      # pinta
       kdePackages.kdenlive
       blanket
-      # davinci-resolve
 
       scrcpy
       wl-clipboard
