@@ -66,6 +66,7 @@
       vicinae
 
       quickemu # VM and stuff
+      jetbrains.webstorm
     ]
     ++ (
       with stable-pkgs; [
