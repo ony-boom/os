@@ -10,7 +10,7 @@
     ./terminal.nix
     ./distrobox.nix
     ./programming.nix
-    ./steam.nix
+    ./game.nix
   ];
 
   # base packages
@@ -55,6 +55,7 @@
       gimp2
       kdePackages.kdenlive
       blanket
+      lunacy
 
       scrcpy
       wl-clipboard
