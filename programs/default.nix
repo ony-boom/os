@@ -44,7 +44,6 @@
 
       bruno
       zed-editor
-      affine
 
       blueberry
       pavucontrol
