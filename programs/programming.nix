@@ -7,6 +7,8 @@
 
   environment.systemPackages = with pkgs;
     [
+      webhook
+
       fenix.default.toolchain
       fenix.rust-analyzer
     ];
