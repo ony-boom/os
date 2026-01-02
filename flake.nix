@@ -5,18 +5,8 @@
 
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
 
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     swoosh = {
       url = "github:ony-boom/swoosh";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    matugen = {
-      url = "github:/InioX/Matugen";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -28,11 +18,6 @@
     agenix.url = "github:ryantm/agenix";
 
     vicinae.url = "github:vicinaehq/vicinae";
-
-    # ignis = {
-    #   url = "github:ignis-sh/ignis";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
   };
 
   nixConfig = {
@@ -64,7 +49,6 @@
             inputs.vicinae.overlays.default
             inputs.agenix.overlays.default
             (prev: final: {
-              matugen = inputs.matugen.packages.${system}.default;
               zen-browser = inputs.zen-browser.packages.${system}.default;
             })
           ];

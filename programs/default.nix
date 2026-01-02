@@ -36,7 +36,7 @@
       gnome-disk-utility
 
       # emote
-      icon-library
+      # icon-library
       google-chrome
       zen-browser
 
@@ -53,7 +53,6 @@
       obs-studio
       gimp2
       kdePackages.kdenlive
-      blanket
       feishin
 
       scrcpy
@@ -62,7 +61,6 @@
       playerctl
 
       agenix
-      matugen
       vicinae
 
       quickemu # VM and stuff
@@ -77,7 +75,6 @@
   programs = {
     swoosh.enable = true;
     seahorse.enable = true;
-    # firefox.enable = true;
     localsend.enable = true;
     nm-applet.enable = true;
     nix-ld = {

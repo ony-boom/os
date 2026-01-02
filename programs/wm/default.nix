@@ -1,14 +1,12 @@
 {pkgs, ...}: {
   imports = [
     ./utils
-    # ./ignis.nix
   ];
 
   programs.hyprland = {
     enable = true;
     withUWSM = true;
   };
-
 
   environment.systemPackages = with pkgs; [
     swww
@@ -17,7 +15,6 @@
     libnotify
 
     rofi
-    cliphist
 
     waybar
     networkmanagerapplet

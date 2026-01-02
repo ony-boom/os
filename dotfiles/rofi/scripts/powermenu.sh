@@ -22,7 +22,7 @@ do_reboot() {
 }
 
 do_suspend() {
-    systemctl suspend
+    loginctl terminate-session "$XDG_SESSION_ID"
 }
 
 do_lock() {
