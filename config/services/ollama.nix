@@ -5,7 +5,7 @@
       package = pkgs.ollama-cuda;
     };
     open-webui = {
-      enable = true;
+      enable = false;
       port = 8080;
 
       environment = {
