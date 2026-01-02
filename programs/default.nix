@@ -54,7 +54,7 @@
       gimp2
       kdePackages.kdenlive
       blanket
-      lunacy
+      feishin
 
       scrcpy
       wl-clipboard
