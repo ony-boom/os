@@ -42,7 +42,6 @@
 
       ghostty
 
-      bruno
       zed-editor
 
       blueberry
@@ -68,6 +67,7 @@
     ]
     ++ (
       with stable-pkgs; [
+        bruno
         lmms
       ]
     );
