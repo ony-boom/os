@@ -1,10 +1,11 @@
 vim.pack.add({
 	{ src = "https://github.com/rafamadriz/friendly-snippets" },
-	{ src = "https://github.com/saghen/blink.cmp", version = "v1.7.0" },
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("*") },
 })
 
 require("blink.cmp").setup({
 	keymap = { ["<CR>"] = { "accept", "fallback" } },
+	fuzzy = { implementation = "prefer_rust_with_warning" },
 	appearance = {
 		nerd_font_variant = "mono",
 	},

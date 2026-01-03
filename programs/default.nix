@@ -52,7 +52,9 @@
       obs-studio
       gimp2
       kdePackages.kdenlive
+
       feishin
+      nicotine-plus
 
       scrcpy
       wl-clipboard
@@ -68,7 +70,6 @@
     ++ (
       with stable-pkgs; [
         bruno
-        lmms
       ]
     );
 
