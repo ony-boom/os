@@ -1,4 +1,4 @@
-@import "./colors/kanagawa-dragon.css";
+@import "./colors/rose-pine.css";
 
 * {
     font-family: "Hasklug Nerd Font Propo";
@@ -8,18 +8,20 @@
 #waybar {
     background: @bg;
     color: @fg;
+    border-radius: 8px;
 }
 
 #workspaces button {
     color: @muted;
-    border-radius: 0;
+    padding: 0 6px;
+    border-radius: 8px;
     transition: all 0.3s;
     border: solid 1px transparent;
 }
 
 #workspaces button.active {
     color: @fg;
-    border: solid 1px @border;
+    /* border: solid 1px @border; */
 }
 
 #network,

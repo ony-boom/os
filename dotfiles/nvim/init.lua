@@ -1,6 +1,6 @@
 require("options")
-require("plugins")
 require("themes")
+require("plugins")
 require("configs")
 require("lsp")
 require("mappings")

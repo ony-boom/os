@@ -7,6 +7,7 @@
     ./env.nix
     ./user.nix
     ./boot.nix
+    ./disks.nix
   ];
   networking.hostName = "maki"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -20,7 +21,6 @@
   time.timeZone = "Indian/Antananarivo";
 
   security.polkit.enable = true;
-
   fonts = {
     packages = with pkgs; [
       noto-fonts

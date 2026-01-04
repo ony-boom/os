@@ -1,4 +1,4 @@
-@theme "kanagawa-dragon"
+@theme "rose-pine"
 
 configuration {
   location: 2;
@@ -11,7 +11,10 @@ configuration {
 
 window {
   width: 350px;
+  border-radius: 8px;
+  padding: 6px;
   background-color: @bg;
+  y-offset: 4px;
   border-color: @bordercolor;
 }
 
@@ -26,6 +29,7 @@ mainbox {
 
 element {
   padding: 18px 12px;
+  border-radius: 6px;
 }
 
 element.selected {

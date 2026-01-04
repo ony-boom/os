@@ -19,6 +19,5 @@ vim.diagnostic.config {
   },
 }
 
-vim.cmd("colorscheme kanagawa")
 vim.cmd(":hi Statusline guibg=NONE")
 vim.cmd("highlight StatusLineNC guibg=NONE ctermbg=NONE")

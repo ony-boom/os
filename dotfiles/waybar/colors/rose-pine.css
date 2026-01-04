@@ -1,0 +1,11 @@
+@define-color bg rgba(25, 23, 36, 1);
+@define-color fg rgba(224, 222, 244, 1);
+@define-color muted rgba(110, 106, 134, 1);
+@define-color selected-bg rgba(64, 61, 82, 1);
+@define-color border rgba(82, 79, 103, 1);
+
+@define-color blue #c4a7e7;
+@define-color red #eb6f92;
+@define-color green #31748f;
+@define-color cyan #9ccfd8;
+@define-color yellow #f6c177;
