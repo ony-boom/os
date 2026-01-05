@@ -74,6 +74,7 @@
     );
 
   programs = {
+    adb.enable = true;
     swoosh.enable = true;
     seahorse.enable = true;
     localsend.enable = true;

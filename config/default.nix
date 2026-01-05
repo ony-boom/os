@@ -17,7 +17,7 @@
     enable = true;
   };
 
-  virtualisation.libvirtd.enable = true;
+  # virtualisation.libvirtd.enable = true;
 
   # Set your time zone.
   time.timeZone = "Indian/Antananarivo";
