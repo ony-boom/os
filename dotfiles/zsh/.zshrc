@@ -1,5 +1,6 @@
 alias ls='eza --icons=always'
 alias lg='lazygit'
+alias scrcpy='scrcpy --render-driver=opengles2'
 
 
 # PATHS

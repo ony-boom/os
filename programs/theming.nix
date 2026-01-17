@@ -1,11 +1,11 @@
 {pkgs, ...}: let
   gtk-theme = pkgs.colloid-gtk-theme.override {
-    tweaks = ["rimless" "black" "gruvbox"];
-    themeVariants = ["default" "yellow" "orange" "grey"];
+    tweaks = ["rimless" "black" "catppuccin"];
+    themeVariants = ["default"];
   };
 
   icon-theme = pkgs.colloid-icon-theme.override {
-    schemeVariants = ["gruvbox"];
+    schemeVariants = ["catppuccin"];
   };
 in {
   environment.systemPackages = [
