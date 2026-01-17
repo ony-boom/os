@@ -3,8 +3,8 @@
 		"always_allow_tool_actions": true,
 		"model_parameters": [],
 		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-4o"
+			"provider": "zed.dev",
+			"model": "claude-sonnet-4-5"
 		}
 	},
 	"vim_mode": true,
@@ -27,7 +27,7 @@
 	},
 
 	"theme": {
-		"dark": "Kanagawa Dragon",
+		"dark": "Rosé Pine",
 		"light": "Kanagawa Lotus"
 	},
 

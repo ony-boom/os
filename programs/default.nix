@@ -56,7 +56,6 @@
       feishin
       nicotine-plus
 
-      scrcpy
       wl-clipboard
 
       playerctl
@@ -74,7 +73,6 @@
     );
 
   programs = {
-    adb.enable = true;
     swoosh.enable = true;
     seahorse.enable = true;
     localsend.enable = true;
