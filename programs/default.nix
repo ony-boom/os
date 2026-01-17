@@ -30,7 +30,7 @@
       gnumake # make
       stow # for dotfiles because hm is annoying
 
-      nautilus # file manager
+      kdePackages.dolphin
       shotwell
       cheese
       gnome-disk-utility
