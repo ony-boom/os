@@ -30,8 +30,8 @@
       gnumake # make
       stow # for dotfiles because hm is annoying
 
-      kdePackages.dolphin
-      shotwell
+      nemo
+      loupe
       cheese
       gnome-disk-utility
 

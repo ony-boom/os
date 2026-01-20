@@ -34,5 +34,7 @@
       '';
       syntaxHighlighting.enable = true;
     };
+
+    direnv.enable = true;
   };
 }
