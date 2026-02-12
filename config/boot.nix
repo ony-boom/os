@@ -5,6 +5,7 @@
     efiSupport = true;
     device = "nodev";
     useOSProber = true;
+    configurationLimit = 5;
   };
 
   # Use the systemd-boot EFI boot loader.

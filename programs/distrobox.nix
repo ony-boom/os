@@ -1,10 +1,11 @@
 {pkgs, ...}: {
-  virtualisation.podman = {
+  virtualisation.docker = {
     enable = true;
-    dockerCompat = true;
+    enableOnBoot = true;
+    extraPackages = with pkgs; [
+      docker-compose
+    ];
   };
 
-  environment.systemPackages = with pkgs; [
-    docker-compose
-  ];
+  virtualisation.podman.enable = true;
 }

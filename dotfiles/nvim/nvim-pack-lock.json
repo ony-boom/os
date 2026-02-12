@@ -50,6 +50,10 @@
       "rev": "23320e75953ac82e559c610bec5a90d9c6dfa743",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
+    "nvim-eslint": {
+      "rev": "491deac6d89a5c51013fa71b63c3cc093db15dde",
+      "src": "https://github.com/esmuellert/nvim-eslint"
+    },
     "nvim-lspconfig": {
       "rev": "336b388c272555d2ae94627a50df4c2f89a5e257",
       "src": "https://github.com/neovim/nvim-lspconfig"
