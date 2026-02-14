@@ -1,11 +1,13 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  enable = true;
+in {
   services = {
     ollama = {
-      enable = false;
+      inherit enable;
       package = pkgs.ollama-cuda;
     };
     open-webui = {
-      enable = false;
+      inherit enable;
       port = 8080;
 
       environment = {
