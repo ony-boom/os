@@ -35,6 +35,14 @@
       syntaxHighlighting.enable = true;
     };
 
-    direnv.enable = true;
+    direnv = {
+      enable = true;
+      settings = {
+        global = {
+          log_filter = "^$";
+          hide_env_diff = true;
+        };
+      };
+    };
   };
 }
