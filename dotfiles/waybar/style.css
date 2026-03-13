@@ -45,7 +45,7 @@
 }
 
 #bluetooth {
-  color: @blue;
+  color: @green;
 }
 
 #bluetooth.disabled {

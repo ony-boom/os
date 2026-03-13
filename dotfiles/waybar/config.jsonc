@@ -8,7 +8,7 @@
 
   "modules-center": ["clock"],
 
-  "modules-right": ["network", "hyprland/language", "wireplumber", "tray"],
+  "modules-right": ["network", "hyprland/language", "wireplumber", "bluetooth", "tray"],
 
   "hyprland/workspaces": {
     "persistent-workspaces": {
