@@ -40,6 +40,12 @@
     "scroll-step": 0.2
   },
 
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱"
+  },
+
   "tray": {
     "icon-size": 21,
     "spacing": 12

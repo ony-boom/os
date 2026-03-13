@@ -1,44 +1,53 @@
 @import "./colors/rose-pine.css";
 
 * {
-    font-family: "Hasklug Nerd Font Propo";
-    font-weight: 600;
+  font-family: "Hasklug Nerd Font Propo";
+  font-weight: 600;
 }
 
 #waybar {
-    background: @bg;
-    color: @fg;
-    border-radius: 8px;
+  background: @bg;
+  color: @fg;
+  border-radius: 8px;
 }
 
 #workspaces button {
-    color: @muted;
-    padding: 0 6px;
-    border-radius: 8px;
-    transition: all 0.3s;
-    border: solid 1px transparent;
+  color: @muted;
+  padding: 0 6px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: solid 1px transparent;
 }
 
 #workspaces button.active {
-    color: @fg;
-    /* border: solid 1px @border; */
+  color: @fg;
+  /* border: solid 1px @border; */
 }
 
 #network,
 #language,
 #tray,
-#wireplumber {
-    padding: 0 12px;
+#wireplumber,
+#bluetooth {
+  padding: 0 12px;
 }
 
 #language {
-    color: @yellow;
+  color: @yellow;
 }
 
 #wireplumber {
-    color: @cyan;
+  color: @cyan;
 }
 
 #wireplumber.muted {
-    color: @red;
+  color: @red;
+}
+
+#bluetooth {
+  color: @blue;
+}
+
+#bluetooth.disabled {
+  color: @muted;
 }
