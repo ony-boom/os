@@ -65,6 +65,7 @@
 
       quickemu # VM and stuff
       jetbrains.webstorm
+      code-cursor
     ]
     ++ (
       with stable-pkgs; [
