@@ -38,7 +38,6 @@
       # emote
       # icon-library
       google-chrome
-      zen-browser
 
       ghostty
 

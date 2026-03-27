@@ -10,11 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     agenix.url = "github:ryantm/agenix";
 
     vicinae.url = "github:vicinaehq/vicinae";
@@ -48,9 +43,6 @@
           nixpkgs.overlays = [
             inputs.vicinae.overlays.default
             inputs.agenix.overlays.default
-            (prev: final: {
-              zen-browser = inputs.zen-browser.packages.${system}.default;
-            })
           ];
         }
 
