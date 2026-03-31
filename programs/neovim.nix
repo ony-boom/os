@@ -10,8 +10,6 @@
     nil
     nixd
 
-    oxlint
-    oxfmt
     biome
     lua-language-server
 
