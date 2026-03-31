@@ -43,7 +43,7 @@
 
       zed-editor
 
-      blueberry
+      blueman
       pavucontrol
 
       vlc

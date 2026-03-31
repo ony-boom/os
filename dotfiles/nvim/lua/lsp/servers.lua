@@ -12,4 +12,6 @@ return {
 	"svelte",
 	"angularls",
 	"denols",
+	"oxlint",
+	"oxfmt",
 }

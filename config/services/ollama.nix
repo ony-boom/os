@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  enable = true;
+  enable = false;
 in {
   services = {
     ollama = {

@@ -1,6 +1,7 @@
 vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 
 local web = { "prettierd", "prettier", stop_after_first = true }
+local with_oxc = table.insert(web, 1, "oxfmt")
 
 -- Limit biome detection to current working directory
 local cwd = vim.loop.cwd() or vim.fn.getcwd()
@@ -20,12 +21,12 @@ require("conform").setup({
 		lua = { "stylua" },
 		nix = { "alejandra" },
 		go = { "gofumpt", "goimports" },
-		json = web,
+		json = with_oxc,
 		jsonc = web,
-		javascript = web,
-		typescript = web,
-		javascriptreact = web,
-		typescriptreact = web,
+		javascript = with_oxc,
+		typescript = with_oxc,
+		javascriptreact = with_oxc,
+		typescriptreact = with_oxc,
 		html = web,
 		css = web,
 	},
