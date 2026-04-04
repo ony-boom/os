@@ -8,7 +8,7 @@
     ./theming.nix
     ./neovim.nix
     ./terminal.nix
-    ./distrobox.nix
+    ./vm-stuff.nix
     ./programming.nix
     ./game.nix
   ];
@@ -62,9 +62,8 @@
       agenix
       vicinae
 
-      quickemu # VM and stuff
       jetbrains.webstorm
-      code-cursor
+      onlyoffice-desktopeditors
     ]
     ++ (
       with stable-pkgs; [
@@ -83,7 +82,6 @@
         stdenv.cc.cc
       ];
     };
-    dconf.enable = true;
     git.enable = true;
   };
 }

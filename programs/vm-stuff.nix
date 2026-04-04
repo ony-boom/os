@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    quickemu # VM and stuff
+  ];
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
