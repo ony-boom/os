@@ -20,6 +20,7 @@
       wget
       curl
       ffmpeg
+      p7zip
 
       # thumbnail things
       imagemagick
@@ -63,6 +64,7 @@
       vicinae
 
       jetbrains.webstorm
+      android-studio
       onlyoffice-desktopeditors
     ]
     ++ (
