@@ -12,7 +12,7 @@ background-opacity = 0.90
 gtk-titlebar = false
 window-decoration = none
 window-theme = ghostty
-adw-toolbar-style = flat
+adjust-cell-height = 20%
 
 cursor-style = bar
 cursor-style-blink = true
