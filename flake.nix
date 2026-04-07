@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    silentSDDM = {
+      url = "github:uiriansan/SilentSDDM";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     agenix.url = "github:ryantm/agenix";
 
     vicinae.url = "github:vicinaehq/vicinae";
@@ -48,6 +53,7 @@
 
         inputs.agenix.nixosModules.default
         inputs.swoosh.nixosModules.default
+        inputs.silentSDDM.nixosModules.default
 
         ./config
         ./programs
