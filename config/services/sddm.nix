@@ -9,6 +9,6 @@
 
   programs.silentSDDM = {
     enable = true;
-    theme = "silent";
+    theme = "default";
   };
 }

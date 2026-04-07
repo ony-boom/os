@@ -225,8 +225,29 @@
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable",
+        "silentSDDM": "silentSDDM",
         "swoosh": "swoosh",
         "vicinae": "vicinae"
+      }
+    },
+    "silentSDDM": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775529071,
+        "narHash": "sha256-z7LF/Vn8Zfbh5pgF/y7TPhz19AwTlQKrfGJdJHpOqOg=",
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
+        "rev": "f8ec3cd49dcd98c04860ca1ac105727b5cfc6981",
+        "type": "github"
+      },
+      "original": {
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
+        "type": "github"
       }
     },
     "swoosh": {
