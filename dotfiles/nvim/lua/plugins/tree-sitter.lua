@@ -1,21 +1,33 @@
 vim.pack.add({
 	{
 		src = "https://github.com/nvim-treesitter/nvim-treesitter",
-		version = "master",
+		version = "main",
 	},
 })
 
-require("nvim-treesitter.configs").setup({
-	auto_install = true,
-	sync_install = false,
+local to_be_highlighted = {
+	"typescript",
+	"javascript",
+	"tsx",
+	"svelte",
+	"go",
+	"nix",
+	"markdown",
+	"markdown.mdx",
+	"json",
+	"css",
+	"html",
+	"toml",
+	"lua",
+}
 
-	modules = {},
-	ignore_install = {},
+local tree_sitter = require("nvim-treesitter")
 
-	ensure_installed = { "lua", "vim", "vimdoc" },
+tree_sitter.install(to_be_highlighted)
 
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
-	},
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = to_be_highlighted,
+	callback = function()
+		vim.treesitter.start()
+	end,
 })
