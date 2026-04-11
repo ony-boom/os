@@ -13,7 +13,6 @@ local to_be_highlighted = {
 	"go",
 	"nix",
 	"markdown",
-	"markdown.mdx",
 	"json",
 	"css",
 	"html",
