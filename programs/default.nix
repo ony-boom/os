@@ -21,6 +21,7 @@
       curl
       ffmpeg
       p7zip
+      peazip
 
       # thumbnail things
       imagemagick
