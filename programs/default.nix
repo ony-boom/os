@@ -67,6 +67,7 @@
       jetbrains.webstorm
       android-studio
       onlyoffice-desktopeditors
+      android-tools
     ]
     ++ (
       with stable-pkgs; [
@@ -75,7 +76,6 @@
     );
 
   programs = {
-    adb.enable = true;
     swoosh.enable = true;
     seahorse.enable = true;
     localsend.enable = true;
