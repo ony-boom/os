@@ -1,3 +1,7 @@
+require("vim._core.ui2").enable({
+	enable = true,
+})
+
 vim.o.number = true
 vim.o.relativenumber = true
 
@@ -13,4 +17,4 @@ vim.opt.foldlevel = 99
 
 vim.opt.undofile = true
 
-vim.opt.fillchars:append { eob = " " }
+vim.opt.fillchars:append({ eob = " " })
