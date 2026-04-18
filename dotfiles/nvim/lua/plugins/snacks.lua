@@ -6,6 +6,13 @@ require("snacks").setup({
 	picker = {
 		enabled = true,
 		sources = {
+			files = {
+				ignored = true,
+			},
+			grep = {
+        hidden = true,
+				ignored = true,
+			},
 			explorer = {
 				replace_netrw = true,
 			},
