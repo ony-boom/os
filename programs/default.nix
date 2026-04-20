@@ -16,7 +16,6 @@
   # base packages
   environment.systemPackages = with pkgs;
     [
-      dig
       wget
       curl
       ffmpeg
@@ -43,8 +42,6 @@
 
       ghostty
 
-      zed-editor
-
       blueman
       pavucontrol
 
@@ -52,10 +49,9 @@
       spotify
       obs-studio
       gimp2
-      kdePackages.kdenlive
 
       feishin
-      nicotine-plus
+      tauon
 
       wl-clipboard
 
