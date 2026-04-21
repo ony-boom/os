@@ -29,12 +29,12 @@ vim.keymap.set("n", "<leader>fo", function()
 	Snacks.picker.recent()
 end, { desc = "recent file", silent = true })
 
-
 vim.keymap.set("n", "<leader>h", function()
 	Snacks.picker.help()
 end, { desc = "Vim help", silent = true })
 
-
 vim.keymap.set("n", '"', function()
 	Snacks.picker.registers()
 end, { desc = "Registers", silent = true })
+
+vim.keymap.set("x", "Y", '"+y', { desc = "Copy selection to system clipboard", silent = true })
