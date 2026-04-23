@@ -4,6 +4,9 @@ vim.lsp.config("lua_ls", {
 			workspace = {
 				library = vim.api.nvim_get_runtime_file("", true),
 			},
+			diagnostics = {
+				globals = { "vim", "wk", "Snacks" },
+			},
 		},
 	},
 })

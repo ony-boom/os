@@ -3,7 +3,6 @@ vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 local cwd = vim.loop.cwd() or vim.fn.getcwd()
 
 local web = { "prettierd", "prettier", stop_after_first = true }
-
 local oxc_root = vim.fs.root(cwd, { ".oxfmtrc", "oxfmt.config.ts", "oxfmt.config.js" })
 
 if oxc_root then
@@ -22,9 +21,7 @@ if biome_root then
 	table.insert(web, 1, "biome")
 end
 
-local conform = require("conform")
-
-conform.setup({
+require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		nix = { "alejandra" },
@@ -44,6 +41,14 @@ conform.setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>lf", function()
-	conform.format({ async = true })
-end, { desc = "Format document", silent = true })
+wk.add({
+	{ "<leader>l", group = "lsp" },
+	{
+		"<leader>lf",
+		function()
+			require("conform").format({ async = true })
+		end,
+		desc = "Format document",
+		silent = true,
+	},
+})
