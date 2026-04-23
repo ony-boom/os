@@ -22,7 +22,9 @@ if biome_root then
 	table.insert(web, 1, "biome")
 end
 
-require("conform").setup({
+local conform = require("conform")
+
+conform.setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		nix = { "alejandra" },
@@ -41,3 +43,7 @@ require("conform").setup({
 		lsp_format = "fallback",
 	},
 })
+
+vim.keymap.set("n", "<leader>lf", function()
+	conform.format({ async = true })
+end, { desc = "Format document", silent = true })
