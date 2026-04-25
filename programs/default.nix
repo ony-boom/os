@@ -51,7 +51,6 @@
       gimp2
 
       feishin
-      tauon
 
       wl-clipboard
 
