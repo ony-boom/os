@@ -52,6 +52,7 @@
 
 #tray {
   background: @bg;
+  color: @fg;
   border-radius: 12px;
   padding: 0 12px;
 }
