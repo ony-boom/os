@@ -62,6 +62,7 @@
       android-studio
       onlyoffice-desktopeditors
       android-tools
+      zed-editor
     ]
     ++ (
       with stable-pkgs; [
