@@ -48,7 +48,6 @@
       vlc
       spotify
       obs-studio
-      gimp2
 
       feishin
 
@@ -66,6 +65,7 @@
     ]
     ++ (
       with stable-pkgs; [
+        gimp2
         bruno
       ]
     );
