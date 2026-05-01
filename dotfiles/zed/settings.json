@@ -1,14 +1,15 @@
 {
-	"agent": {
-		"default_model": {
-   "provider": "copilot_chat",
-   "model": "gpt-4o",
-   "enable_thinking": false
-  },
-  "model_parameters": [],
-
-	},
-	"vim_mode": true,
+	"agent_servers": {
+  "claude-acp": {
+   "type": "registry"
+  }
+ },
+ "icon_theme": {
+  "mode": "light",
+  "light": "Colored Zed Icons Theme Light",
+  "dark": "Colored Zed Icons Theme Dark"
+ },
+ "vim_mode": true,
 	"base_keymap": "JetBrains",
 	"relative_line_numbers": "enabled",
 
@@ -18,20 +19,16 @@
 	},
 
 	"buffer_font_size": 19.0,
-	"buffer_font_family": "Hasklug Nerd Font",
 	"buffer_font_features": {
 		"calt": true,
 	},
 
 	"theme": {
-		"dark": "Rosé Pine",
-		"light": "Kanagawa Lotus",
-	},
+  "mode": "light",
+  "light": "Gruvbox Light Hard",
+  "dark": "Catppuccin Mocha"
+ },
 
-	"icon_theme": {
-		"dark": "JetBrains New UI Icons (Dark)",
-		"light": "JetBrains New UI Icons (Light)",
-	},
 	"format_on_save": "off",
 	"tab_size": 2,
 	"hard_tabs": true,

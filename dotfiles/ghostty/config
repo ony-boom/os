@@ -3,7 +3,7 @@ font-family = Monolisa
 
 font-size = 15
 # theme = dark:kanagawa-dragon,light:kanagawa-lotus
-theme = Rose Pine
+theme = Gruvbox Light Hard
 
 window-padding-y = 10
 window-padding-x = 12
