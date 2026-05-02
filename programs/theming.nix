@@ -16,8 +16,12 @@ in {
     enable = true;
     quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
   };
-  environment.systemPackages = [
-    gtk-theme
-    icon-theme
-  ];
+  environment.systemPackages =
+    [
+      gtk-theme
+      icon-theme
+    ]
+    ++ (with pkgs; [
+      adw-gtk3
+    ]);
 }
