@@ -17,4 +17,6 @@ adjust-cell-height = 20%
 cursor-style = bar
 cursor-style-blink = true
 
+gtk-tabs-location = bottom
+
 keybind = ctrl+shift+r=prompt_surface_title
