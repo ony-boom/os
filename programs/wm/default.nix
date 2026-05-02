@@ -10,15 +10,8 @@
 
   environment.systemPackages = with pkgs; [
     awww
-
-    mako
     libnotify
-
-    rofi
-
     waybar
-    networkmanagerapplet
-
     nwg-look
   ];
 
