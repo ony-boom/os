@@ -43,7 +43,6 @@
 
       ghostty
 
-      blueman
       pavucontrol
 
       vlc
