@@ -26,6 +26,7 @@
       imagemagick
       ffmpegthumbnailer
 
+      glow
       bottom
 
       gnumake # make
