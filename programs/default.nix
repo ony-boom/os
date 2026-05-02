@@ -73,7 +73,6 @@
     );
 
   programs = {
-    swoosh.enable = true;
     seahorse.enable = true;
     localsend.enable = true;
     nm-applet.enable = true;

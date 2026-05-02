@@ -5,11 +5,6 @@
 
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
 
-    swoosh = {
-      url = "github:ony-boom/swoosh";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     silentSDDM = {
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -57,7 +52,6 @@
         }
 
         inputs.agenix.nixosModules.default
-        inputs.swoosh.nixosModules.default
         inputs.silentSDDM.nixosModules.default
 
         ./config
