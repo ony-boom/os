@@ -18,6 +18,11 @@
     agenix.url = "github:ryantm/agenix";
 
     vicinae.url = "github:vicinaehq/vicinae";
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/quickshell/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
