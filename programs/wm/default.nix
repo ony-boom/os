@@ -1,27 +1,12 @@
 {pkgs, ...}: {
-  imports = [
-    ./utils
-  ];
-
   programs.hyprland = {
     enable = true;
     withUWSM = true;
   };
 
   environment.systemPackages = with pkgs; [
-    awww
     libnotify
-    waybar
-    nwg-look
   ];
-
-  # xdg.portal = {
-  #   enable = true;
-  #   extraPortals = with pkgs; [
-  #     xdg-desktop-portal-gtk
-  #     xdg-desktop-portal-gnome
-  #   ];
-  # };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     description = "polkit-gnome-authentication-agent-1";

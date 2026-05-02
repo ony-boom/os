@@ -32,9 +32,9 @@
       gnumake # make
       stow # for dotfiles because hm is annoying
 
-      nemo
       loupe
       cheese
+      nautilus
       gnome-disk-utility
 
       # emote
