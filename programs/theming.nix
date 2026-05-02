@@ -14,6 +14,7 @@
 in {
   programs.dms-shell = {
     enable = true;
+    systemd.enable = true;
     quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
   };
   environment.systemPackages =
