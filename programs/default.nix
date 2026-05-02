@@ -75,7 +75,6 @@
   programs = {
     seahorse.enable = true;
     localsend.enable = true;
-    nm-applet.enable = true;
     nix-ld = {
       enable = true;
       libraries = with pkgs; [
