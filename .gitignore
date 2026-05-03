@@ -4,3 +4,4 @@
 dotfiles/ghostty/themes/dankcolors
 dotfiles/zed/themes/dank-zed-theme.json
 dotfiles/hypr/dms/colors.conf
+*.dmsbackup*
