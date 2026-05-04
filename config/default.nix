@@ -44,6 +44,11 @@
     5353
   ];
 
+  xdg.terminal-exec = {
+    enable = true;
+    settings.default = "ghostty.desktop";
+  };
+
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.

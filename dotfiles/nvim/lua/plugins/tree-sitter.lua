@@ -8,6 +8,7 @@ vim.pack.add({
 local to_be_highlighted = {
 	"typescript",
 	"javascript",
+	"jsx",
 	"tsx",
 	"svelte",
 	"go",
@@ -17,6 +18,7 @@ local to_be_highlighted = {
 	"css",
 	"html",
 	"toml",
+	"yaml",
 	"lua",
 }
 
