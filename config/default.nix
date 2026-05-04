@@ -46,7 +46,7 @@
 
   xdg.terminal-exec = {
     enable = true;
-    settings.default = ["ghostty.desktop"];
+    settings.default = ["com.mitchellh.ghostty.desktop"];
   };
 
   # Copy the NixOS configuration file and link it from the resulting system
