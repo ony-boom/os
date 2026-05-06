@@ -50,6 +50,7 @@
       obs-studio
 
       feishin
+      trayscale
 
       wl-clipboard
 
