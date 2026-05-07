@@ -51,13 +51,14 @@
 
       feishin
       trayscale
+      vicinae
+      logseq
 
       wl-clipboard
 
       playerctl
 
       agenix
-      vicinae
 
       jetbrains.webstorm
       android-studio
