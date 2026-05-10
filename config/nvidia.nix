@@ -13,9 +13,7 @@
     open = false;
     nvidiaSettings = true;
 
-    # waiting for the HDMI cable error fix
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-
 
     # package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     #   version = "580.95.05";
