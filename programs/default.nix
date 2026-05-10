@@ -48,6 +48,7 @@
       vlc
       spotify
       obs-studio
+      obsidian
 
       feishin
       trayscale
