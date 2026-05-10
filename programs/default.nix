@@ -52,8 +52,6 @@
       feishin
       trayscale
       vicinae
-      logseq
-
       wl-clipboard
 
       playerctl
