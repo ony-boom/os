@@ -9,7 +9,6 @@
     ./neovim.nix
     ./terminal.nix
     ./vm-stuff.nix
-    ./programming.nix
     ./game.nix
   ];
 
@@ -35,6 +34,7 @@
       loupe
       cheese
       nautilus
+      baobab
       gnome-disk-utility
 
       # emote
