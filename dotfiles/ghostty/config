@@ -1,13 +1,13 @@
 shell-integration = zsh
-font-family = Monolisa
+font-family = Maple Mono NF
 
-font-size = 15
+font-size = 16
 # theme = dark:kanagawa-dragon,light:kanagawa-lotus
 theme = dankcolors
 
 window-padding-y = 10
 window-padding-x = 12
-background-opacity = 0.90
+background-opacity = 0.95
 
 gtk-titlebar = false
 window-decoration = none

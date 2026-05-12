@@ -32,9 +32,10 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       nerd-fonts.hasklug
+      maple-mono.NF
     ];
     fontconfig.defaultFonts = {
-      monospace = ["Hasklug Nerd Font Mono"];
+      monospace = ["Maple Mono NF"];
     };
   };
 
