@@ -59,7 +59,7 @@
 
       agenix
 
-      jetbrains.webstorm
+      jetbrains-toolbox
       android-studio
       onlyoffice-desktopeditors
       android-tools
