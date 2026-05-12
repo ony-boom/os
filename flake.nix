@@ -18,14 +18,21 @@
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
     extra-subtituters = [
       "https://cuda-maintainers.cachix.org"
+      "https://fenix.cachix.org"
     ];
     extra-trusted-public-keys = [
       "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
+      "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
     ];
   };
 
@@ -48,6 +55,7 @@
           nixpkgs.overlays = [
             inputs.vicinae.overlays.default
             inputs.agenix.overlays.default
+            inputs.fenix.overlays.default
           ];
         }
 
