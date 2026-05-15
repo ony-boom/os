@@ -14,4 +14,5 @@ return {
 	"denols",
 	"oxlint",
 	"oxfmt",
+	"rust_analyzer",
 }
