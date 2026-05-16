@@ -16,5 +16,17 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		set_hl("Pmenu", palette.fg, palette.none)
 		set_hl("PmenuSbar", palette.none, palette.none)
 		set_hl("PmenuThumb", palette.none, palette.grey0)
+
+		set_hl("NormalFloat", palette.fg, palette.none)
+		set_hl("FloatBorder", palette.grey1, palette.none)
+		set_hl("FloatTitle", palette.green, palette.none)
+		set_hl("NormalDoc", palette.fg, palette.none)
+		set_hl("NormalDocBorder", palette.grey1, palette.none)
+
+		set_hl("DiagnosticFloatingError", palette.red, palette.none)
+		set_hl("DiagnosticFloatingWarn", palette.yellow, palette.none)
+		set_hl("DiagnosticFloatingInfo", palette.blue, palette.none)
+		set_hl("DiagnosticFloatingHint", palette.green, palette.none)
+		set_hl("DiagnosticFloatingOk", palette.green, palette.none)
 	end,
 })
