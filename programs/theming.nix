@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
     adw-gtk3
     adwaita-icon-theme
+    tela-icon-theme
     hicolor-icon-theme
   ];
 }
