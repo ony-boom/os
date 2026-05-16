@@ -2,7 +2,6 @@
   imports = [
     ./gnome-keyring.nix
     ./sddm.nix
-    ./ollama.nix
     ./profile-pic.nix
   ];
   # Enable touchpad support (enabled default in most desktopManager)
