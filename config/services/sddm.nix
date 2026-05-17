@@ -9,6 +9,5 @@
 
   programs.silentSDDM = {
     enable = true;
-    theme = "rei";
   };
 }
