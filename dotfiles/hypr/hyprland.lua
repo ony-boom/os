@@ -1,6 +1,5 @@
 ---@module 'hl.meta'
 
--- Variables (replace hyprlang $foo)
 local terminal = "ghostty"
 local fileManager = "nautilus"
 local menu = "vicinae toggle"
@@ -14,10 +13,10 @@ hl.env("XCURSOR_SIZE", "24")
 hl.env("XCURSOR_THEME", "BreezeX-Dark")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 
--- Monitors (was monitors.conf)
+-- Monitors monitors.conf)
 hl.monitor({ output = "", mode = "2560x1440@75", position = "auto", scale = "auto" })
 
--- Main config (was hyprland.conf body + input.conf)
+-- Main config
 hl.config({
 	general = {
 		gaps_in = 4,
@@ -47,30 +46,33 @@ hl.config({
 	},
 })
 
--- Bezier + animations (was animations block)
+-- Bezier + animations
 hl.curve("myBezier", { type = "bezier", points = { { 0.08, 0.85 }, { 0.15, 1.05 } } })
 hl.animation({ leaf = "windows", enabled = true, speed = 3.5, bezier = "myBezier", style = "slide" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 3.5, bezier = "myBezier", style = "popin 80%" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.5, bezier = "default" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 3.5, bezier = "default", style = "fade" })
 
--- Window/layer rules (was rules.conf)
+-- Window/layer rules
 hl.layer_rule({
 	name = "vicinae-blur",
 	match = { class = "vicinae" },
 	blur = true,
 	ignore_alpha = 0,
 })
+
 hl.window_rule({
 	name = "suppress-maximize-events",
 	match = { class = ".*" },
 	suppress_event = "maximize",
 })
+
 hl.window_rule({
 	name = "fix-xwayland-drags",
 	match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false },
 	no_focus = true,
 })
+
 hl.window_rule({
 	name = "move-hyprland-run",
 	match = { class = "hyprland-run" },
