@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  programs.niri = {
+    enable = true;
+  };
+
   programs.hyprland = {
     enable = true;
     withUWSM = true;
