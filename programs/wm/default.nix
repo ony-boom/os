@@ -3,13 +3,9 @@
     enable = true;
   };
 
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-  };
-
   environment.systemPackages = with pkgs; [
     libnotify
+    xwayland-satellite
   ];
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
