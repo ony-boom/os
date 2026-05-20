@@ -60,7 +60,7 @@ binds {
     Mod+R hotkey-overlay-title="Run an Application" { spawn "vicinae" "toggle"; }
     Mod+E hotkey-overlay-title="Launch File manager" { spawn "nautilus"; }
     Mod+B hotkey-overlay-title="Launch Browser" { spawn "google-chrome-stable"; }
-    Mod+V hotkey-overlay-title="Launch Keyboard history" { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
+    Mod+V hotkey-overlay-title="Launch Keyboard history" { spawn "vicinae" "vicinae://launch/clipboard/history"; }
     Ctrl+Alt+E hotkey-overlay-title="Launch Emoji" { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
