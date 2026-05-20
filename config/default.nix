@@ -33,9 +33,12 @@
       noto-fonts-color-emoji
       nerd-fonts.hasklug
       maple-mono.NF
+      openmoji-color
+      twitter-color-emoji
     ];
     fontconfig.defaultFonts = {
       monospace = ["Maple Mono NF"];
+      emoji = ["Twitter Color Emoji"];
     };
   };
 
