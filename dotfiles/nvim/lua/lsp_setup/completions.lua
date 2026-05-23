@@ -19,7 +19,7 @@ require("blink.cmp").setup({
 	},
 })
 
-local servers = require("lsp.servers")
+local servers = require("lsp_setup.servers")
 
 for _, server in ipairs(servers) do
 	local capabilities = require("blink.cmp").get_lsp_capabilities()

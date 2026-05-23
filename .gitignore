@@ -4,4 +4,5 @@
 dotfiles/ghostty/themes/dankcolors
 dotfiles/zed/themes/dank-zed-theme.json
 dotfiles/niri/dms
+dotfiles/zsh/.zshenv
 *.dmsbackup*

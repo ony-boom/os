@@ -1,6 +1,10 @@
+require("vim._core.ui2").enable({
+	enable = true,
+})
+
 require("options")
 require("themes")
 require("plugins")
 require("configs")
-require("lsp")
+require("lsp_setup")
 require("mappings")

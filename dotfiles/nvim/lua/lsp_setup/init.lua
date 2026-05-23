@@ -1,13 +1,13 @@
 vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	"https://github.com/esmuellert/nvim-eslint",
+	"https://github.com/b0o/schemastore.nvim",
 })
 
-local servers = require("lsp.servers")
+local servers = require("lsp_setup.servers")
 
 vim.lsp.enable(servers)
 
-require("lsp.configs")
-require("lsp.mappings")
-require("lsp.completions")
+require("lsp_setup.mappings")
+require("lsp_setup.completions")
 require("nvim-eslint").setup({})

@@ -1,4 +1,4 @@
-vim.lsp.config("denols", {
+return {
 	root_dir = function(bufnr, callback)
 		local root_dir = vim.fs.root(bufnr, { "deno.json", "deno.jsonc" })
 
@@ -6,4 +6,4 @@ vim.lsp.config("denols", {
 			callback(root_dir)
 		end
 	end,
-})
+}

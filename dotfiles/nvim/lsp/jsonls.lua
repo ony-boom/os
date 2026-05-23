@@ -1,6 +1,4 @@
-vim.pack.add({ "https://github.com/b0o/schemastore.nvim" })
-
-vim.lsp.config("jsonls", {
+return {
 	capabilities = {
 		textDocument = {
 			completion = {
@@ -17,4 +15,4 @@ vim.lsp.config("jsonls", {
 			validate = { enable = true },
 		},
 	},
-})
+}
