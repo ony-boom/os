@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   stable-pkgs,
   ...
 }: {
@@ -50,7 +51,6 @@
       spotify
       obs-studio
       obsidian
-      discord
 
       feishin
       trayscale
@@ -66,6 +66,8 @@
       onlyoffice-desktopeditors
       android-tools
       zed-editor
+
+      inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
     ]
     ++ (
       with stable-pkgs; [
