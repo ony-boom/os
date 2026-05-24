@@ -33,7 +33,7 @@
   };
 
   nixConfig = {
-    extra-subtituters = [
+    extra-substituters = [
       "https://cuda-maintainers.cachix.org"
       "https://fenix.cachix.org"
     ];
