@@ -12,8 +12,6 @@
 
     agenix.url = "github:ryantm/agenix";
 
-    vicinae.url = "github:vicinaehq/vicinae";
-
     quickshell = {
       url = "git+https://git.outfoxxed.me/quickshell/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,9 +58,11 @@
       modules = [
         {
           nixpkgs.overlays = [
-            inputs.vicinae.overlays.default
             inputs.agenix.overlays.default
             inputs.fenix.overlays.default
+            (_: _: {
+              zen-browser = inputs.zen-browser.packages."${system}".default;
+            })
           ];
         }
 

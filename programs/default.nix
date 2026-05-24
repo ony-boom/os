@@ -66,8 +66,7 @@
       onlyoffice-desktopeditors
       android-tools
       zed-editor
-
-      inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default
+      zen-browser
     ]
     ++ (
       with stable-pkgs; [
