@@ -1,4 +1,4 @@
-{config, ...}: {
+{
   environment = {
     sessionVariables = {
       XDG_CACHE_HOME = "$HOME/.cache";
@@ -14,8 +14,6 @@
       XDG_DATA_DIRS = ["/var/lib/flatpak/exports/share" "$XDG_DATA_HOME/flatpak/exports/share"];
 
       TERMINAL = "ghostty";
-
-      CACHIX_AUTH_TOKEN = "$(cat ${config.age.secrets.cachix-auth-token.path})";
     };
   };
 }

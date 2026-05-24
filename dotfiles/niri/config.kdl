@@ -59,7 +59,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "ghostty"; }
     Mod+R hotkey-overlay-title="Run an Application" { spawn "vicinae" "toggle"; }
     Mod+E hotkey-overlay-title="Launch File manager" { spawn "nautilus"; }
-    Mod+B hotkey-overlay-title="Launch Browser" { spawn "google-chrome-stable"; }
+    Mod+B hotkey-overlay-title="Launch Browser" { spawn "zen-beta"; }
     Mod+V hotkey-overlay-title="Launch Keyboard history" { spawn "vicinae" "vicinae://launch/clipboard/history"; }
     Mod+Escape hotkey-overlay-title="Toggle power menu" {spawn "dms" "ipc" "powermenu" "toggle";}
     Ctrl+Alt+E hotkey-overlay-title="Launch Emoji" { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
