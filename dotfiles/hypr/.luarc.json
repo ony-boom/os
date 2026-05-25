@@ -1,0 +1,5 @@
+{
+  "workspace": {
+    "library": ["./hl.meta.lua"]
+  }
+}

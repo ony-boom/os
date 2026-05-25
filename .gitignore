@@ -4,5 +4,6 @@
 dotfiles/ghostty/themes/dankcolors
 dotfiles/zed/themes/dank-zed-theme.json
 dotfiles/mango/dms
+dotfiles/hypr/dms
 dotfiles/zsh/.zshenv
 *.conf.backup*

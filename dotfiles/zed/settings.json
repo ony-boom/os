@@ -1,5 +1,6 @@
 {
-	"agent_servers": {
+	"buffer_font_family": "Maple Mono NF",
+ "agent_servers": {
   "claude-acp": {
    "type": "registry"
   }
