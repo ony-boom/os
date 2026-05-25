@@ -1,11 +1,11 @@
 {pkgs, ...}: {
-  programs.niri = {
+  programs.mango = {
     enable = true;
+    package = pkgs.mangowc;
   };
 
   environment.systemPackages = with pkgs; [
     libnotify
-    xwayland-satellite
   ];
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {

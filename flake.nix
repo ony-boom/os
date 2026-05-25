@@ -5,6 +5,8 @@
 
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
 
+    vicinae.url = "github:vicinaehq/vicinae";
+
     silentSDDM = {
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,6 +21,11 @@
 
     fenix = {
       url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    mangowm = {
+      url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -66,6 +73,8 @@
           ];
         }
 
+        inputs.vicinae.nixosModules.default
+        inputs.mangowm.nixosModules.mango
         inputs.agenix.nixosModules.default
         inputs.silentSDDM.nixosModules.default
 
