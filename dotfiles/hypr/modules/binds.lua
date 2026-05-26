@@ -12,8 +12,8 @@ hl.bind(mod .. " + E", hl.dsp.exec_cmd(apps.fileManager))
 hl.bind(mod .. " + SHIFT + V", hl.dsp.window.float())
 hl.bind(mod .. " + R", hl.dsp.exec_cmd(apps.menu))
 hl.bind(mod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mod .. " + F", hl.dsp.window.fullscreen_state({ internal = 1, client = -1 }))
-hl.bind(mod .. " + SHIFT + F", hl.dsp.window.fullscreen_state({ internal = 2, client = -1 }))
+hl.bind(mod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })) -- keeps bar/gaps
+hl.bind(mod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" })) -- covers bar
 hl.bind(mod .. " + V", hl.dsp.exec_cmd(apps.clipboard))
 hl.bind("Print", hl.dsp.exec_cmd("dms screenshot -d ~/Pictures/Screenshots"))
 hl.bind("CTRL + ALT + E", hl.dsp.exec_cmd(apps.emoji))
