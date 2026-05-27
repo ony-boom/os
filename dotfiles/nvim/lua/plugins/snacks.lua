@@ -83,4 +83,11 @@ wk.add({
 		desc = "Registers",
 		silent = true,
 	},
+	{
+		"<leader>ss",
+		function()
+			Snacks.picker.lsp_symbols()
+		end,
+		desc = "LSP Symbol",
+	},
 })
