@@ -1,6 +1,5 @@
 ---@module 'hl.meta'
 
--- Window/layer rules
 hl.layer_rule({
 	name = "vicinae-blur",
 	match = { class = "vicinae" },
@@ -30,5 +29,5 @@ hl.window_rule({
 hl.layer_rule({
 	name = "no-blur-osd",
 	match = { namespace = "dms:osd" },
-  blur = false,
+	blur = false,
 })

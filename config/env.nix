@@ -5,11 +5,9 @@
       XDG_DATA_HOME = "$HOME/.local/share";
       XDG_STATE_HOME = "$HOME/.local/state";
 
-      GBM_BACKEND = "nvidia-drm";
-      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-
       XDG_CONFIG_HOME = "$HOME/.config";
       ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
+
 
       # Point ssh/git at gnome-keyring's gcr-ssh-agent so SSH keys unlock once
       # per session. SDDM-launched mangowc doesn't inherit the systemd user env
