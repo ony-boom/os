@@ -27,7 +27,8 @@ hl.window_rule({
 })
 
 hl.layer_rule({
-	name = "no-blur-osd",
-	match = { namespace = "dms:osd" },
-	blur = false,
+	name = "blur-dms",
+	match = { namespace = "dms:.*" },
+	blur = true,
+	ignore_alpha = 0.7,
 })
