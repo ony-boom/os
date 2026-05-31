@@ -50,30 +50,42 @@
       inherit system;
       config.allowUnfree = true;
     };
+
+    # Modules every host shares: external nixos modules, base overlays, and the
+    # common system/program config. Per-host specifics (hardware, disks, GPU,
+    # hostname) live under hosts/<name>/ and are added by mkHost.
+    sharedModules = [
+      {
+        nixpkgs.overlays = [
+          inputs.agenix.overlays.default
+          inputs.fenix.overlays.default
+          (_: _: {
+            zen-browser = inputs.zen-browser.packages."${system}".default;
+          })
+        ];
+      }
+
+      inputs.dms.nixosModules.dank-material-shell
+      inputs.vicinae.nixosModules.default
+      inputs.agenix.nixosModules.default
+      inputs.silentSDDM.nixosModules.default
+
+      ./config
+      ./programs
+    ];
+
+    # Build a host from the shared base plus its hosts/<name>/ module.
+    mkHost = hostName:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit self inputs stable-pkgs;};
+        modules = sharedModules ++ [./hosts/${hostName}];
+      };
   in {
-    nixosConfigurations.maki = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = {inherit self inputs stable-pkgs;};
-      modules = [
-        {
-          nixpkgs.overlays = [
-            inputs.agenix.overlays.default
-            inputs.fenix.overlays.default
-            (_: _: {
-              zen-browser = inputs.zen-browser.packages."${system}".default;
-            })
-          ];
-        }
-
-        inputs.dms.nixosModules.dank-material-shell
-        inputs.vicinae.nixosModules.default
-        inputs.agenix.nixosModules.default
-        inputs.silentSDDM.nixosModules.default
-
-        ./config
-        ./programs
-        ./hardware-configuration.nix
-      ];
+    nixosConfigurations = {
+      maki = mkHost "maki";
+      # Add more hosts here, e.g.:
+      # laptop = mkHost "laptop";
     };
   };
 }

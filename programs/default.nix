@@ -38,13 +38,10 @@
       baobab
       gnome-disk-utility
 
-      # NVIDIA's VA-API/NVDEC decode is broken under Chrome's native Wayland
-      # backend (vaEndPicture "internal decoding error" -> CPU-bound software
-      # decode on 1080p+ video). Forcing the X11/XWayland path restores working
-      # GPU decode. Covers every launch (menu, terminal, scripts).
-      (google-chrome.override {
-        commandLineArgs = ["--ozone-platform=x11"];
-      })
+      # Plain Chrome here; NVIDIA hosts patch it to force the X11/XWayland
+      # backend via an overlay in modules/hardware/nvidia.nix (works around
+      # broken VA-API decode under Chrome's native Wayland path).
+      google-chrome
 
       ghostty
 

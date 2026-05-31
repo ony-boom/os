@@ -1,8 +1,23 @@
+# Opt-in NVIDIA GPU module. Hosts with an NVIDIA card import this from their
+# hosts/<name>/default.nix; hosts on Intel/AMD simply don't.
 {
   config,
   pkgs,
   ...
 }: {
+  # NVIDIA's VA-API/NVDEC decode is broken under Chrome's native Wayland
+  # backend (vaEndPicture "internal decoding error" -> CPU-bound software
+  # decode on 1080p+ video). Forcing the X11/XWayland path restores working
+  # GPU decode. Applied as an overlay so the shared package list stays generic
+  # and non-NVIDIA hosts get a stock Chrome.
+  nixpkgs.overlays = [
+    (_: prev: {
+      google-chrome = prev.google-chrome.override {
+        commandLineArgs = ["--ozone-platform=x11"];
+      };
+    })
+  ];
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -38,5 +53,13 @@
     # Firefox/Zen decode in the sandboxed RDD process; it needs the sandbox
     # relaxed to reach the NVIDIA decoder.
     MOZ_DISABLE_RDD_SANDBOX = "1";
+  };
+
+  # GPU backend hints for the Wayland session. These live here (not in the WM
+  # module) so the desktop stack stays GPU-agnostic across hosts.
+  environment.sessionVariables = {
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
   };
 }

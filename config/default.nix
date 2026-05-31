@@ -1,14 +1,12 @@
+# Shared system base — imported by every host via the flake. Host-specific
+# bits (hostname, timezone, bootloader, disks, GPU) live under hosts/<name>/.
 {pkgs, ...}: {
   imports = [
     ./nix.nix
-    ./nvidia.nix
     ./services
     ./env.nix
     ./user.nix
-    ./boot.nix
-    ./fs.nix
   ];
-  networking.hostName = "maki"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager = {
     enable = true;
@@ -20,9 +18,6 @@
 
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Indian/Antananarivo";
 
   security.polkit.enable = true;
   fonts = {

@@ -8,11 +8,8 @@
     libnotify
   ];
 
-  environment.sessionVariables = {
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    LIBVA_DRIVER_NAME = "nvidia";
-  };
+  # GPU-specific session variables live in the per-host hardware module
+  # (e.g. modules/hardware/nvidia.nix), not here.
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     description = "polkit-gnome-authentication-agent-1";
