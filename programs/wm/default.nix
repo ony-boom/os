@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  programs.mango = {
-    enable = true;
-    package = pkgs.mangowc;
-  };
-
   programs.hyprland = {
     enable = true;
     withUWSM = true;

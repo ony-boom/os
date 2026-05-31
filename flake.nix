@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
 
@@ -24,17 +24,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mangowm = {
-      url = "github:mangowm/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
     };
+
+    dms.url = "github:AvengeMedia/DankMaterialShell";
   };
 
   nixConfig = {
@@ -73,8 +70,8 @@
           ];
         }
 
+        inputs.dms.nixosModules.dank-material-shell
         inputs.vicinae.nixosModules.default
-        inputs.mangowm.nixosModules.mango
         inputs.agenix.nixosModules.default
         inputs.silentSDDM.nixosModules.default
 

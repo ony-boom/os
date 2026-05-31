@@ -1,13 +1,15 @@
 {
   pkgs,
-  inputs,
+  # inputs,
   ...
 }: {
-  programs.dms-shell = {
-    enable = true;
-    systemd.enable = true;
-    quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
-  };
+  # programs.dms-shell = {
+  #   enable = true;
+  #   systemd.enable = true;
+  #   quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
+  # };
+
+  programs.dank-material-shell.enable = true;
 
   environment.systemPackages = with pkgs; [
     adw-gtk3

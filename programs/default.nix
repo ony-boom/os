@@ -49,7 +49,7 @@
       vlc
       spotify
       obs-studio
-      obsidian
+      discord
 
       feishin
       trayscale
