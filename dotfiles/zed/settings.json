@@ -1,5 +1,20 @@
 {
-	"buffer_font_family": "Maple Mono NF",
+	"collaboration_panel": {
+  "button": false
+ },
+ "git_panel": {
+  "dock": "left"
+ },
+ "project_panel": {
+  "dock": "left"
+ },
+ "agent": {
+  "dock": "right",
+  "sidebar_side": "right",
+  "favorite_models": [],
+  "model_parameters": []
+ },
+ "buffer_font_family": "Maple Mono NF",
  "agent_servers": {
   "claude-acp": {
    "type": "registry"
@@ -27,7 +42,7 @@
 	"theme": {
   "mode": "system",
   "light": "Gruvbox Light Hard",
-  "dark": "Everforest Dark Hard (material)"
+  "dark": "Catppuccin Mocha"
  },
 
 	"format_on_save": "off",
