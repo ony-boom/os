@@ -36,4 +36,4 @@ hl.curve("myBezier", { type = "bezier", points = { { 0.08, 0.85 }, { 0.15, 1.05 
 hl.animation({ leaf = "windows", enabled = true, speed = 3.5, bezier = "myBezier", style = "slide" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 3.5, bezier = "myBezier", style = "popin 80%" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.5, bezier = "default" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 3.5, bezier = "default", style = "fade" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 3.5, bezier = "default", style = "slide" })
