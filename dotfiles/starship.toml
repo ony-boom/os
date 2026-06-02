@@ -4,3 +4,6 @@
 success_symbol = "λ"
 error_symbol = "[λ](red)"
 vimcmd_symbol = "[](green)"
+
+[git_branch]
+symbol = ' '
