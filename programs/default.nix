@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./wm
-    ./theming.nix
     ./neovim.nix
     ./terminal.nix
     ./vm-stuff.nix

@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  imports = [
+    ./shell/dms
+  ];
+
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -6,10 +10,13 @@
 
   environment.systemPackages = with pkgs; [
     libnotify
-  ];
 
-  # GPU-specific session variables live in the per-host hardware module
-  # (e.g. modules/hardware/nvidia.nix), not here.
+    # theming
+    adw-gtk3
+    adwaita-icon-theme
+    tela-icon-theme
+    hicolor-icon-theme
+  ];
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     description = "polkit-gnome-authentication-agent-1";
