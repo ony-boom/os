@@ -1,6 +1,7 @@
 {
   pkgs,
   stable-pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -75,6 +76,17 @@
     );
 
   programs = {
+    openscreen = {
+      enable = true;
+      # Upstream's flake records a stale npmDepsHash for its own lockfile, so the
+      # npm-deps FOD fails to verify. Override the fetcher's output hash with the
+      # value Nix actually computes. TODO: Drop this once upstream fixes its hash.
+      package = inputs.openscreen.packages.${pkgs.stdenv.hostPlatform.system}.openscreen.overrideAttrs (old: {
+        npmDeps = old.npmDeps.overrideAttrs (_: {
+          outputHash = "sha256-7eW9p1yMB+36pNdBP5SP9W/d8IiBaER7LD2h1Q1V0+w=";
+        });
+      });
+    };
     seahorse.enable = true;
     localsend.enable = true;
     nix-ld = {

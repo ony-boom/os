@@ -8,6 +8,7 @@ theme = dankcolors
 window-padding-y = 10
 window-padding-x = 12
 background-opacity = 0.95
+unfocused-split-opacity = 1
 
 gtk-titlebar = false
 window-decoration = none

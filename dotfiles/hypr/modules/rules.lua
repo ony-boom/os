@@ -26,6 +26,12 @@ hl.window_rule({
 	float = true,
 })
 
+hl.window_rule({
+	name = "openscreen-no-border",
+	match = { title = "[Oo]penscreen" },
+	border_size = 0,
+})
+
 hl.layer_rule({
 	name = "blur-dms",
 	match = { namespace = "dms:.*" },
