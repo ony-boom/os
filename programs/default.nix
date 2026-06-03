@@ -29,7 +29,7 @@
       bottom
 
       gnumake # make
-      stow # for dotfiles because hm is annoying
+      chezmoi # for dotfiles because hm is annoying
 
       loupe
       cheese
