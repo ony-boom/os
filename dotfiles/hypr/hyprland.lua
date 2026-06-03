@@ -9,3 +9,5 @@ require("dms.colors")
 require("dms.cursor")
 require("dms.layout")
 require("dms.windowrules")
+
+require("dms.outputs")

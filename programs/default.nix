@@ -9,7 +9,6 @@
     ./neovim.nix
     ./terminal.nix
     ./vm-stuff.nix
-    ./game.nix
     ./programming.nix
   ];
 
@@ -61,16 +60,12 @@
 
       agenix
 
-      jetbrains-toolbox
-      android-studio
       onlyoffice-desktopeditors
-      android-tools
       zed-editor
       zen-browser
     ]
     ++ (
       with stable-pkgs; [
-        gimp2
         bruno
       ]
     );

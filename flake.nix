@@ -14,11 +14,6 @@
 
     agenix.url = "github:ryantm/agenix";
 
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
@@ -33,11 +28,11 @@
   nixConfig = {
     extra-substituters = [
       "https://cuda-maintainers.cachix.org"
-      "https://fenix.cachix.org"
+      "https://vicinae.cachix.org"
     ];
     extra-trusted-public-keys = [
       "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
-      "fenix.cachix.org-1:ecJhr+RdYEdcVgUkjruiYhjbBloIEGov7bos90cZi0Q="
+      "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
     ];
   };
 
@@ -59,7 +54,6 @@
       {
         nixpkgs.overlays = [
           inputs.agenix.overlays.default
-          inputs.fenix.overlays.default
           (_: _: {
             zen-browser = inputs.zen-browser.packages."${system}".default;
           })
@@ -86,6 +80,7 @@
   in {
     nixosConfigurations = {
       maki = mkHost "maki";
+      makima = mkHost "makima";
     };
   };
 }

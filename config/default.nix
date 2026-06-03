@@ -52,6 +52,4 @@
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
-
-  system.stateVersion = "25.05"; # Did you read the comment?
 }

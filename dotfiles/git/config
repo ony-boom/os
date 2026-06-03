@@ -1,7 +1,7 @@
-[user]
-	name  = Ony
-	email = ony@ony.world
 [init]
 	defaultBranch = main
 [core]
 	autocrlf = input
+[user]
+	name = Ony
+	email = ony.rakotonirina@fluentech-group.com
