@@ -36,6 +36,7 @@
       nautilus
       baobab
       gnome-disk-utility
+      refine
 
       # Plain Chrome here; NVIDIA hosts patch it to force the X11/XWayland
       # backend via an overlay in modules/hardware/nvidia.nix (works around
