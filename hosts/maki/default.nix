@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ./fs.nix
     ./boot.nix
+    ./programs.nix
 
     # Opt-in hardware: maki has an NVIDIA GPU. A non-NVIDIA host omits this.
     ../../modules/hardware/nvidia.nix
