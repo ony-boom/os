@@ -2,6 +2,3 @@
 	defaultBranch = main
 [core]
 	autocrlf = input
-[user]
-	name = Ony
-	email = ony.rakotonirina@fluentech-group.com
