@@ -18,6 +18,7 @@ hl.bind(mod .. " + V", hl.dsp.exec_cmd(apps.clipboard))
 hl.bind("Print", hl.dsp.exec_cmd("dms screenshot -d ~/Pictures/Screenshots"))
 hl.bind("CTRL + ALT + E", hl.dsp.exec_cmd(apps.emoji))
 hl.bind(mod .. " + Escape", hl.dsp.exec_cmd("dms ipc powermenu toggle"))
+hl.bind(mod .. " + L", hl.dsp.exec_cmd("dms ipc call lock lock"))
 
 -- Move window / move focus (arrows)
 for _, d in ipairs({ "left", "right", "up", "down" }) do
