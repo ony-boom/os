@@ -1,6 +1,7 @@
 {
   imports = [
     ./locale.nix
+    ./env.nix
     ./hardware-configuration.nix
   ];
 
