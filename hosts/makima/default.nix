@@ -2,6 +2,7 @@
   imports = [
     ./locale.nix
     ./env.nix
+    ./programs.nix
     ./hardware-configuration.nix
   ];
 
