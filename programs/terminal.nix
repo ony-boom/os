@@ -16,6 +16,7 @@
     fzf
     fd
 
+    carapace
     zsh-vi-mode
   ];
 

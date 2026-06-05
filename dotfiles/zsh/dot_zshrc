@@ -17,6 +17,11 @@ export PATH="$PATH:$XDG_BIN_HOME:$GOPATH/bin:$PNPM_HOME:$PNPM_HOME/bin:$BUN_BIN:
 # export PATH=$PATH:$ANDROID_HOME/emulator
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Carapace
+autoload -U compinit && compinit
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
 
 # Lazy to configure prompt
 eval "$(starship init zsh)"
