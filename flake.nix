@@ -22,7 +22,6 @@
     };
 
     dms.url = "github:AvengeMedia/DankMaterialShell";
-    openscreen.url = "github:siddharthvaddem/openscreen";
   };
 
   nixConfig = {
@@ -64,7 +63,6 @@
       inputs.vicinae.nixosModules.default
       inputs.agenix.nixosModules.default
       inputs.silentSDDM.nixosModules.default
-      inputs.openscreen.nixosModules.default
 
       ./config
       ./programs
