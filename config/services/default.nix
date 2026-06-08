@@ -27,6 +27,7 @@
   };
 
   services.flatpak.enable = true;
+  services.upower.enable = true;
 
   # sound
   services.pipewire = {
