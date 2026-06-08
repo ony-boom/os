@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   imports = [
     ./gnome-keyring.nix
@@ -20,9 +21,9 @@
     enable = true;
     # keyboard
     xkb = {
-      layout = "us,us";
-      variant = ",intl";
-      options = "grp:win_space_toggle";
+      layout = lib.mkDefault "us,us";
+      variant = lib.mkDefault ",intl";
+      options = lib.mkDefault "grp:win_space_toggle";
     };
   };
 
