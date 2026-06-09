@@ -21,6 +21,7 @@ local to_be_highlighted = {
 	"yaml",
 	"lua",
 	"kdl",
+  "prisma"
 }
 
 local tree_sitter = require("nvim-treesitter")

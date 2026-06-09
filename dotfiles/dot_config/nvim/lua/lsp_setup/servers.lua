@@ -15,4 +15,5 @@ return {
 	"oxlint",
 	"oxfmt",
 	"rust_analyzer",
+	"prismals",
 }
