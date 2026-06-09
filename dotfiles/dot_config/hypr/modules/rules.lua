@@ -32,3 +32,10 @@ hl.layer_rule({
 	blur = true,
 	ignore_alpha = 0.7,
 })
+
+hl.layer_rule({
+	name = "grk-layer",
+	match = { namespace = "gtk-layer-shell" },
+	blur = true,
+	ignore_alpha = 0.7,
+})
