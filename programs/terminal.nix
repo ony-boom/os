@@ -18,6 +18,8 @@
 
     carapace
     zsh-vi-mode
+
+    lazydocker
   ];
 
   # services.atuin.enable = true;
