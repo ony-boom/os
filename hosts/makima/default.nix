@@ -4,6 +4,9 @@
     ./env.nix
     ./programs.nix
     ./hardware-configuration.nix
+
+
+    ../../modules/hardware/fingerprint.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
