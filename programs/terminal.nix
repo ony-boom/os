@@ -15,6 +15,7 @@
     ripgrep
     fzf
     fd
+    killport
 
     carapace
     zsh-vi-mode
