@@ -17,7 +17,6 @@
     fd
     killport
 
-    carapace
     zsh-vi-mode
 
     lazydocker
