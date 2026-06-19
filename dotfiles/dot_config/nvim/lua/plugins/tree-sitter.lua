@@ -5,10 +5,10 @@ vim.pack.add({
 	},
 })
 
-local to_be_highlighted = {
+-- Parser names to install (NOT filetypes — see below).
+local parsers = {
 	"typescript",
 	"javascript",
-	"jsx",
 	"tsx",
 	"svelte",
 	"go",
@@ -21,29 +21,52 @@ local to_be_highlighted = {
 	"yaml",
 	"lua",
 	"kdl",
-  "prisma"
+	"prisma",
 }
 
-local tree_sitter = require("nvim-treesitter")
+-- Neovim filetypes that should get treesitter highlighting. These differ from
+-- the parser names: .tsx -> filetype `typescriptreact` (tsx parser),
+-- .jsx -> filetype `javascriptreact` (javascript parser).
+local filetypes = {
+	"typescript",
+	"typescriptreact",
+	"javascript",
+	"javascriptreact",
+	"svelte",
+	"go",
+	"nix",
+	"markdown",
+	"json",
+	"css",
+	"html",
+	"toml",
+	"yaml",
+	"lua",
+	"kdl",
+	"prisma",
+}
 
-tree_sitter.install(to_be_highlighted)
+-- Map the mismatched filetypes to their parser so vim.treesitter.start() resolves them.
+vim.treesitter.language.register("tsx", { "typescriptreact" })
+vim.treesitter.language.register("javascript", { "javascriptreact" })
+
+require("nvim-treesitter").install(parsers)
 
 local function try_start(buf)
 	buf = buf or vim.api.nvim_get_current_buf()
-	local ft = vim.bo[buf].filetype
-	if vim.tbl_contains(to_be_highlighted, ft) then
+	if vim.tbl_contains(filetypes, vim.bo[buf].filetype) then
 		pcall(vim.treesitter.start, buf)
 	end
 end
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = to_be_highlighted,
+	pattern = filetypes,
 	callback = function(args)
 		try_start(args.buf)
 	end,
 })
 
--- The FileType event for the buffer opened on startup (e.g. `nvim file.ts`)
+-- The FileType event for the buffer opened on startup (e.g. `nvim file.tsx`)
 -- can fire before this plugin loads, so the autocmd above misses it. Kick off
 -- highlighting for any buffers that are already open.
 for _, buf in ipairs(vim.api.nvim_list_bufs()) do
