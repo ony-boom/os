@@ -2,3 +2,9 @@
     theme:
       selectedLineBgColor:
         - reverse
+  customCommands:
+    - key: '<c-g>'
+      context: 'files'
+      description: 'Generate commit message with Claude'
+      command: 'git commit -m "$(git diff --cached | claude -p "Write a concise conventional-commit message for this staged diff. Output ONLY the commit message, no preamble, no code fences.")"'
+      output: terminal
