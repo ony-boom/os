@@ -9,6 +9,7 @@
     ./terminal.nix
     ./vm-stuff.nix
     ./programming.nix
+    ./game.nix
   ];
 
   # base packages
