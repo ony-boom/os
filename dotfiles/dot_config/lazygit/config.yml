@@ -6,5 +6,11 @@
     - key: '<c-g>'
       context: 'files'
       description: 'Generate commit message with Claude'
-      command: 'git commit -m "$(git diff --cached | claude -p "Write a concise conventional-commit message for this staged diff. Output ONLY the commit message, no preamble, no code fences.")"'
-      output: terminal
+      command: 'git commit -m {{ .Form.message | quote }}'
+      output: log
+      prompts:
+        - type: 'input'
+          title: 'Commit message (<tab> for Claude suggestion — takes a few sec):'
+          key: 'message'
+          suggestions:
+            command: 'git diff --cached | claude -p "Write a concise conventional-commit message for this staged diff. Output ONLY the commit message on a single line, no preamble, no code fences."'
