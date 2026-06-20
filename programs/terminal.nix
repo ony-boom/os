@@ -7,6 +7,7 @@
     fastfetch
 
     gh # github cli tool
+    hunk
 
     openssl # some apps depends on it
     yazi
@@ -18,7 +19,6 @@
     killport
 
     zsh-vi-mode
-
     lazydocker
   ];
 
