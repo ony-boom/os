@@ -22,6 +22,11 @@
     };
 
     dms.url = "github:AvengeMedia/DankMaterialShell";
+
+    hunk = {
+      url = "github:modem-dev/hunk";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -55,6 +60,7 @@
           inputs.agenix.overlays.default
           (_: _: {
             zen-browser = inputs.zen-browser.packages."${system}".default;
+            hunk = inputs.hunk.packages."${system}".hunk;
           })
         ];
       }
