@@ -1,7 +1,7 @@
 shell-integration = zsh
 font-family = Maple Mono NF
 
-font-size = 16
+font-size = 14
 # theme = dark:kanagawa-dragon,light:kanagawa-lotus
 theme = dankcolors
 
