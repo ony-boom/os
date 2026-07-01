@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   imports = [
     ./gnome-keyring.nix
     ./sddm.nix
@@ -13,7 +13,7 @@
 
   # ssh/remote things
   services.openssh.enable = true;
-  services.tailscale.enable = true;
+  services.tailscale.enable = lib.mkDefault true;
 
   # Enable the X11 windowing system.
   services.xserver = {
@@ -27,11 +27,14 @@
   };
 
   services.flatpak.enable = true;
-  services.upower.enable = true;
 
   # sound
+  hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    wireplumber.enable = true;
     pulse.enable = true;
   };
 }
