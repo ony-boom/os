@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   imports = [
     ./locale.nix
     ./env.nix
@@ -14,6 +14,9 @@
 
   networking.hostName = "makima";
   time.timeZone = "Indian/Antananarivo";
+
+  # Override the shared services.tailscale.enable = true from ../../config.
+  services.tailscale.enable = lib.mkForce false;
 
   system.stateVersion = "26.05"; # Did you read the comment?
 }
