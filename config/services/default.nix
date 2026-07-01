@@ -28,8 +28,6 @@
 
   services.flatpak.enable = true;
 
-  # sound
-  hardware.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
