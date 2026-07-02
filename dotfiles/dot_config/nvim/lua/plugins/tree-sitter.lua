@@ -22,6 +22,7 @@ local parsers = {
 	"lua",
 	"kdl",
 	"prisma",
+	"todotxt",
 }
 
 -- Neovim filetypes that should get treesitter highlighting. These differ from
@@ -44,7 +45,17 @@ local filetypes = {
 	"lua",
 	"kdl",
 	"prisma",
+	"todotxt",
 }
+
+-- Associate todo.txt and done.txt with the todotxt filetype so treesitter
+-- highlighting kicks in for them.
+vim.filetype.add({
+	filename = {
+		["todo.txt"] = "todotxt",
+		["done.txt"] = "todotxt",
+	},
+})
 
 -- Map the mismatched filetypes to their parser so vim.treesitter.start() resolves them.
 vim.treesitter.language.register("tsx", { "typescriptreact" })
