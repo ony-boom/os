@@ -16,8 +16,10 @@
     enable = true;
   };
 
-  virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+
+  # On by default upstream; pulls speech-dispatcher + mbrola voices (~700 MiB).
+  services.speechd.enable = false;
 
   security.polkit.enable = true;
   fonts = {

@@ -1,6 +1,9 @@
 .PHONY: link-dotfiles rebuild rebuild-remote all
 
-BUILD_HOST := ony@hizuru.tempel-goblin.ts.net
+# Public IP, not the ts.net name: Tailscale SSH intercepts port 22 on the
+# tailnet and demands periodic browser re-auth, which breaks non-interactive
+# builds. Plain sshd + ony's key on the public IP is what colmena already uses.
+BUILD_HOST := ony@94.250.201.16
 
 all: rebuild
 
@@ -20,10 +23,12 @@ diff-dotfiles:
 # Build locally on maki (default). With the cache fix in place, prebuilt deps
 # are substituted from the caches instead of compiled.
 rebuild:
-	sudo nixos-rebuild switch
+	sudo nixos-rebuild --accept-flake-config switch
 
 # Offload the build to the VPS: maki ships the derivation up, the VPS fetches
 # deps and compiles, and only the result is copied back. Useful when something
 # must compile from source and you don't want maki to do it.
+# --sudo instead of a leading sudo: the ssh to the build host must run as ony
+# (root has no key for hizuru); nixos-rebuild elevates only for activation.
 rebuild-remote:
-	sudo nixos-rebuild switch --build-host $(BUILD_HOST)
+	nixos-rebuild switch --accept-flake-config --sudo --build-host $(BUILD_HOST)

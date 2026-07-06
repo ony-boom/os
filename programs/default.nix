@@ -1,8 +1,4 @@
-{
-  pkgs,
-  stable-pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./wm
     ./neovim.nix
@@ -49,7 +45,9 @@
 
       vlc
       spotify
-      obs-studio
+      # browserSupport drags in a 2 GiB CEF (full Chromium) just for OBS
+      # browser sources.
+      (obs-studio.override {browserSupport = false;})
       discord
 
       feishin
@@ -64,12 +62,9 @@
       onlyoffice-desktopeditors
       zed-editor
       zen-browser
-    ]
-    ++ (
-      with stable-pkgs; [
-        bruno
-      ]
-    );
+
+      bruno
+    ];
 
   programs = {
     seahorse.enable = true;

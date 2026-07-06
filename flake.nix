@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
 
@@ -46,10 +45,6 @@
     ...
   }: let
     system = "x86_64-linux";
-    stable-pkgs = import inputs.nixpkgs-stable {
-      inherit system;
-      config.allowUnfree = true;
-    };
 
     # Modules every host shares: external nixos modules, base overlays, and the
     # common system/program config. Per-host specifics (hardware, disks, GPU,
@@ -78,7 +73,7 @@
     mkHost = hostName:
       nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit self inputs stable-pkgs;};
+        specialArgs = {inherit self inputs;};
         modules = sharedModules ++ [./hosts/${hostName}];
       };
   in {
