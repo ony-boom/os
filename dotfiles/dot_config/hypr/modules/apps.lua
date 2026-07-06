@@ -3,7 +3,7 @@ return {
 	terminal = "ghostty",
 	fileManager = "nautilus",
 	menu = "vicinae toggle",
-	browser = {{ if eq .chezmoi.hostname "makima" }}"google-chrome"{{ else }}"zen-beta"{{ end }},
+	browser = "google-chrome",
 	clipboard = "vicinae vicinae://launch/clipboard/history",
 	emoji = "vicinae vicinae://launch/core/search-emojis",
 }

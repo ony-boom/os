@@ -50,9 +50,6 @@
     # The default EGL backend is broken on driver 525+; the direct backend
     # is required for VA-API to actually work on current drivers.
     NVD_BACKEND = "direct";
-    # Firefox/Zen decode in the sandboxed RDD process; it needs the sandbox
-    # relaxed to reach the NVIDIA decoder.
-    MOZ_DISABLE_RDD_SANDBOX = "1";
   };
 
   # GPU backend hints for the Wayland session. These live here (not in the WM

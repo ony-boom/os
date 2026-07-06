@@ -13,13 +13,6 @@
 
     agenix.url = "github:ryantm/agenix";
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
-    };
-
     dms.url = "github:AvengeMedia/DankMaterialShell";
 
     hunk = {
@@ -54,7 +47,6 @@
         nixpkgs.overlays = [
           inputs.agenix.overlays.default
           (_: _: {
-            zen-browser = inputs.zen-browser.packages."${system}".default;
             hunk = inputs.hunk.packages."${system}".hunk;
           })
         ];

@@ -61,7 +61,6 @@
 
       onlyoffice-desktopeditors
       zed-editor
-      zen-browser
 
       bruno
     ];

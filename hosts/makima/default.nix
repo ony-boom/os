@@ -1,7 +1,6 @@
 {lib, ...}: {
   imports = [
     ./locale.nix
-    ./env.nix
     ./programs.nix
     ./services.nix
     ./hardware-configuration.nix

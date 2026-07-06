@@ -11,6 +11,7 @@
       XDG_DATA_DIRS = ["/var/lib/flatpak/exports/share" "$XDG_DATA_HOME/flatpak/exports/share"];
 
       TERMINAL = "ghostty";
+      BROWSER = "google-chrome";
     };
   };
 }
