@@ -17,6 +17,9 @@ hl.window_rule({
 	name = "fix-xwayland-drags",
 	match = { class = "^$", title = "^$", xwayland = true, float = true, fullscreen = false, pin = false },
 	no_focus = true,
+	no_blur = true,
+	no_shadow = true,
+	rounding = 0,
 })
 
 hl.window_rule({
