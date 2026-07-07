@@ -45,12 +45,9 @@
 
       vlc
       spotify
-      # browserSupport drags in a 2 GiB CEF (full Chromium) just for OBS
-      # browser sources.
-      (obs-studio.override {browserSupport = false;})
+      obs-studio
       discord
 
-      feishin
       trayscale
       vicinae
       wl-clipboard
