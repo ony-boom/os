@@ -1,10 +1,6 @@
 # Opt-in NVIDIA GPU module. Hosts with an NVIDIA card import this from their
 # hosts/<name>/default.nix; hosts on Intel/AMD simply don't.
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # NVIDIA's VA-API/NVDEC decode is broken under Chrome's native Wayland
   # backend (vaEndPicture "internal decoding error" -> CPU-bound software
   # decode on 1080p+ video). Forcing the X11/XWayland path restores working
@@ -20,30 +16,17 @@
 
   hardware.graphics = {
     enable = true;
-    enable32Bit = true;
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
+      libva-vdpau-driver
+      libvdpau-va-gl
     ];
   };
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia.open = true;
 
   # libva-utils gives `vainfo` for verifying VA-API works
   environment.systemPackages = [pkgs.libva-utils];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-
-    powerManagement = {
-      enable = true;
-      finegrained = false;
-    };
-
-    open = false;
-    nvidiaSettings = true;
-
-    package = config.boot.kernelPackages.nvidiaPackages.production;
-  };
-
-  services.xserver.videoDrivers = ["nvidia"];
 
   environment.variables = {
     LIBVA_DRIVER_NAME = "nvidia";
@@ -58,5 +41,6 @@
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     LIBVA_DRIVER_NAME = "nvidia";
+    NIXOS_OZONE_WL = "1";
   };
 }
