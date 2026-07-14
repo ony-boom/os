@@ -8,8 +8,10 @@
   };
 in
   {
+    # distrobox uses the podman/docker backends enabled in programs/vm-stuff.nix.
     environment.systemPackages = with pkgs; [
       obsidian
+      distrobox
     ];
   }
   // netbird
