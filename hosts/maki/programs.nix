@@ -7,4 +7,7 @@
     ardour
     gimp2
   ];
+
+  virtualisation.waydroid.enable = true;
+  virtualisation.waydroid.package = pkgs.waydroid-nftables;
 }
