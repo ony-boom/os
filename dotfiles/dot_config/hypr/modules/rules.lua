@@ -29,6 +29,15 @@ hl.window_rule({
 	float = true,
 })
 
+-- fl studio (bottles/wine): xwayland pointer offset is only zero when the main
+-- window fills the screen, so force it fullscreen. title "^FL Studio" avoids the
+-- welcome/plugin dialogs.
+hl.window_rule({
+	name = "fl-studio-fullscreen",
+	match = { class = "steam_proton", title = "^FL Studio" },
+	fullscreen = true,
+})
+
 hl.layer_rule({
 	name = "blur-dms",
 	match = { namespace = "dms:.*" },

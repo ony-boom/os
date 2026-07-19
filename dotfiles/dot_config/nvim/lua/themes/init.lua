@@ -4,4 +4,4 @@ require("themes.rose-pine")
 require("themes.gruvbox")
 require("themes.everforest")
 
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme kanagawa")
