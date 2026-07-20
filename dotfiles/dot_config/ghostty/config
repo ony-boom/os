@@ -1,7 +1,7 @@
 shell-integration = zsh
 font-family = Iosevka Nerd Font
 
-font-size = 14
+font-size = 16
 # theme = dark:kanagawa-dragon,light:kanagawa-lotus
 theme = dankcolors
 
