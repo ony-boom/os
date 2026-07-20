@@ -28,12 +28,13 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       nerd-fonts.hasklug
+      nerd-fonts.iosevka
       maple-mono.NF
       openmoji-color
       twitter-color-emoji
     ];
     fontconfig.defaultFonts = {
-      monospace = ["Maple Mono NF"];
+      monospace = ["Iosevka Nerd Font" "Maple Mono NF"];
       emoji = ["Twitter Color Emoji"];
     };
   };
