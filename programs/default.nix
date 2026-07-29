@@ -45,7 +45,6 @@
 
       vlc
       spotify
-      obs-studio
       discord
 
       trayscale
@@ -56,11 +55,21 @@
 
       agenix
 
-      onlyoffice-desktopeditors
       zed-editor
 
       bruno
     ];
+
+  # ponytail: on-demand, kept out of systemPackages. Every path in the system
+  # closure is re-downloaded in full whenever unstable rerolls stdenv (~monthly),
+  # so packages used occasionally cost far more in bandwidth than in disk.
+  # `nix run nixpkgs#<name>` fetches them when needed — and gives a newer build
+  # than the pinned system would.
+  #
+  #   obs-studio                 1.95 GB (bundles cef-binary)
+  #   onlyoffice-desktopeditors  1.03 GB
+  #
+  # Move one back here the moment it becomes part of your daily loop.
 
   programs = {
     seahorse.enable = true;
