@@ -1,12 +1,12 @@
-{lib, ...}: {
+{...}: {
   imports = [
     ./locale.nix
     ./programs.nix
     ./services.nix
     ./hardware-configuration.nix
 
-
     ../../modules/hardware/fingerprint.nix
+    ../../modules/networking/netbird-tailscale.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -15,8 +15,8 @@
   networking.hostName = "makima";
   time.timeZone = "Indian/Antananarivo";
 
-  # Override the shared services.tailscale.enable = true from ../../config.
-  services.tailscale.enable = lib.mkForce false;
+  # Tailscale stays on here alongside NetBird; see programs.nix for how the
+  # two are kept from fighting over 100.64.0.0/10.
 
   system.stateVersion = "26.05"; # Did you read the comment?
 }
