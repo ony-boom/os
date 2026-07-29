@@ -7,7 +7,6 @@
     fastfetch
 
     gh # github cli tool
-    hunk
 
     openssl # some apps depends on it
     yazi
@@ -20,6 +19,7 @@
 
     zsh-vi-mode
     lazydocker
+    tuicr
   ];
 
   # services.atuin.enable = true;
