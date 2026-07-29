@@ -1,4 +1,4 @@
-{...}: {
+{lib, ...}: {
   imports = [
     ./locale.nix
     ./programs.nix
@@ -6,7 +6,6 @@
     ./hardware-configuration.nix
 
     ../../modules/hardware/fingerprint.nix
-    ../../modules/networking/netbird-tailscale.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -15,8 +14,12 @@
   networking.hostName = "makima";
   time.timeZone = "Indian/Antananarivo";
 
-  # Tailscale stays on here alongside NetBird; see programs.nix for how the
-  # two are kept from fighting over 100.64.0.0/10.
+  # Override the shared services.tailscale.enable = true from ../../config.
+  # NetBird (programs.nix) is the mesh on this host; Tailscale was only ever
+  # here to make maki able to find and reach it, and mDNS in ../../config does
+  # that on the LAN without a second VPN. modules/networking/netbird-tailscale.nix
+  # stays in the tree, unimported, for whenever both need to run at once again.
+  services.tailscale.enable = lib.mkForce false;
 
   system.stateVersion = "26.05"; # Did you read the comment?
 }
