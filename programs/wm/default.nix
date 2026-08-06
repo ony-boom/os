@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./shell/dms
+    ./screenshot.nix
   ];
 
   programs.hyprland = {

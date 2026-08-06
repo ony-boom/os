@@ -16,6 +16,7 @@ hl.bind(mod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "
 hl.bind(mod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" })) -- covers bar
 hl.bind(mod .. " + V", hl.dsp.exec_cmd(apps.clipboard))
 hl.bind("Print", hl.dsp.exec_cmd("dms screenshot -d ~/Pictures/Screenshots"))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd("screenshot-annotate")) -- same capture, opens satty to draw on it
 hl.bind("CTRL + ALT + E", hl.dsp.exec_cmd(apps.emoji))
 hl.bind(mod .. " + Escape", hl.dsp.exec_cmd("dms ipc powermenu toggle"))
 hl.bind(mod .. " + L", hl.dsp.exec_cmd("dms ipc call lock lock"))

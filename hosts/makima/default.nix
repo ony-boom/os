@@ -12,6 +12,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "makima";
+  networking.extraHosts = ''
+    10.0.0.106 grafana.local.fluen.tech
+  '';
   time.timeZone = "Indian/Antananarivo";
 
   # Override the shared services.tailscale.enable = true from ../../config.
