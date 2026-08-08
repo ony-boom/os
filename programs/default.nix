@@ -55,8 +55,6 @@
 
       agenix
 
-      zed-editor
-
       bruno
     ];
 

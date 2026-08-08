@@ -1,9 +1,10 @@
 # Shared system base — imported by every host via the flake. Host-specific
 # bits (hostname, timezone, bootloader, disks, GPU) live under hosts/<name>/.
-{pkgs, ...}: {
+{...}: {
   imports = [
     ./nix.nix
     ./services
+    ./fonts
     ./env.nix
     ./user.nix
   ];
@@ -22,22 +23,6 @@
   services.speechd.enable = false;
 
   security.polkit.enable = true;
-  fonts = {
-    packages = with pkgs; [
-      noto-fonts
-      noto-fonts-cjk-sans
-      noto-fonts-color-emoji
-      nerd-fonts.hasklug
-      nerd-fonts.iosevka
-      maple-mono.NF
-      openmoji-color
-      twitter-color-emoji
-    ];
-    fontconfig.defaultFonts = {
-      monospace = ["Iosevka Nerd Font" "Maple Mono NF"];
-      emoji = ["Twitter Color Emoji"];
-    };
-  };
 
   networking.firewall.allowedTCPPorts = [
     8080

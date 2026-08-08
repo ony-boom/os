@@ -2,12 +2,11 @@ shell-integration = zsh
 font-family = DankMono Nerd Font
 
 font-size = 16
-# theme = dark:kanagawa-dragon,light:kanagawa-lotus
-theme = dankcolors
+theme = Rose Pine Dawn
 
 window-padding-y = 10
 window-padding-x = 12
-background-opacity = 0.85
+background-opacity = 0.75
 unfocused-split-opacity = 1
 
 gtk-titlebar = false
