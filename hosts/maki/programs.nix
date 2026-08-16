@@ -9,6 +9,8 @@
     android-tools
     ardour
     gimp2
+    spotiflac
+    glab
   ];
 
   virtualisation.waydroid.enable = true;
