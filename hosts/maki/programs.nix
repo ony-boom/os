@@ -11,6 +11,7 @@
     gimp2
     spotiflac
     glab
+    video-downloader
   ];
 
   virtualisation.waydroid.enable = true;
