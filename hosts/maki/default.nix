@@ -7,7 +7,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./fs.nix
     ./boot.nix
     ./programs.nix
 
