@@ -9,54 +9,53 @@
   ];
 
   # base packages
-  environment.systemPackages = with pkgs;
-    [
-      wget
-      curl
-      ffmpeg
-      p7zip
-      peazip
+  environment.systemPackages = with pkgs; [
+    wget
+    curl
+    ffmpeg
+    p7zip
+    peazip
 
-      # thumbnail things
-      imagemagick
-      ffmpegthumbnailer
+    # thumbnail things
+    imagemagick
+    ffmpegthumbnailer
 
-      glow
-      bottom
+    glow
+    bottom
 
-      gnumake # make
-      chezmoi # for dotfiles because hm is annoying
+    gnumake # make
+    chezmoi # for dotfiles because hm is annoying
 
-      loupe
-      cheese
-      nautilus
-      baobab
-      gnome-disk-utility
-      refine
+    loupe
+    cheese
+    nautilus
+    baobab
+    gnome-disk-utility
+    refine
 
-      # Plain Chrome here; NVIDIA hosts patch it to force the X11/XWayland
-      # backend via an overlay in modules/hardware/nvidia.nix (works around
-      # broken VA-API decode under Chrome's native Wayland path).
-      google-chrome
+    # Plain Chrome here; NVIDIA hosts patch it to force the X11/XWayland
+    # backend via an overlay in modules/hardware/nvidia.nix (works around
+    # broken VA-API decode under Chrome's native Wayland path).
+    google-chrome
 
-      ghostty
+    ghostty
 
-      pavucontrol
+    pavucontrol
 
-      vlc
-      spotify
-      discord
+    vlc
+    spotify
+    discord
 
-      trayscale
-      vicinae
-      wl-clipboard
+    trayscale
+    vicinae
+    wl-clipboard
 
-      playerctl
+    playerctl
 
-      agenix
+    agenix
 
-      bruno
-    ];
+    bruno
+  ];
 
   # ponytail: on-demand, kept out of systemPackages. Every path in the system
   # closure is re-downloaded in full whenever unstable rerolls stdenv (~monthly),
