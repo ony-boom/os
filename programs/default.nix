@@ -54,7 +54,11 @@
 
     agenix
 
+    zed-editor
+
     bruno
+
+    android-tools
   ];
 
   # ponytail: on-demand, kept out of systemPackages. Every path in the system

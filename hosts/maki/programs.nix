@@ -1,11 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     feishin
-    # ponytail: android-studio (3.4 GB) is on-demand — `nix run nixpkgs#android-studio`.
-    # Anything in systemPackages is re-downloaded in full on every unstable stdenv
-    # reroll, so occasional-use giants stay out of the closure. Put it back if you
-    # start opening it daily.
-    android-tools
+    jetbrains-toolbox
     ardour
     gimp2
     spotiflac
