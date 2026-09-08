@@ -1,4 +1,4 @@
-{lib, ...}: {
+{...}: {
   imports = [
     ./locale.nix
     ./programs.nix
@@ -29,12 +29,24 @@
     iptables -D nixos-fw -p tcp -s 172.28.0.0/16 --dport 3000 -j nixos-fw-accept || true
   '';
 
-  # Override the shared services.tailscale.enable = true from ../../config.
-  # NetBird (programs.nix) is the mesh on this host; Tailscale was only ever
-  # here to make maki able to find and reach it, and mDNS in ../../config does
-  # that on the LAN without a second VPN. modules/networking/netbird-tailscale.nix
-  # stays in the tree, unimported, for whenever both need to run at once again.
-  services.tailscale.enable = lib.mkForce false;
+  # NetBird (work, ./programs.nix) and Tailscale (personal) both live inside
+  # 100.64.0.0/10, and they only coexist once Tailscale stops policing that
+  # range: its ts-input chain ends with `! -i tailscale0 -s 100.64.0.0/10 -j
+  # DROP`, which eats every NetBird packet arriving on wt0. Turning netfilter
+  # off drops the whole chain set rather than trying to poke a hole in it.
+  #
+  # Routing needs no help. On Linux tailscaled installs a /32 per peer in table
+  # 52 -- the single 100.64.0.0/10 route is a macOS/Android optimisation -- so a
+  # NetBird address misses table 52 and falls through to main, even though the
+  # `ip rule` at 5270 sends it to table 52 first. Two cases still collide: a
+  # Tailscale exit node, whose default route in table 52 swallows everything,
+  # and a Tailscale peer holding the exact address of a NetBird peer.
+  #
+  # ts-input also *opened* with `-i tailscale0 -j ACCEPT`, which is what let
+  # inbound tailnet traffic past the host firewall; trustedInterfaces is that
+  # rule, restated in NixOS' own firewall now that Tailscale writes none.
+  services.tailscale.extraSetFlags = ["--netfilter-mode=off"];
+  networking.firewall.trustedInterfaces = ["tailscale0"];
 
   system.stateVersion = "26.05"; # Did you read the comment?
 }

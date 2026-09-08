@@ -1,10 +1,9 @@
 {pkgs, ...}: let
-  # NetBird is the only mesh here -- Tailscale is off in default.nix -- so
-  # nothing contends for 100.64.0.0/10 or for DNS. resolved stays the single
-  # backend (hence handing NetworkManager over to it) because NetBird registers
-  # its search domains per link over D-Bus rather than rewriting resolv.conf.
-  # If Tailscale ever comes back, re-import modules/networking/netbird-tailscale.nix
-  # and set networking.netbirdTailscale.enable there.
+  # Work mesh, alongside personal Tailscale -- ./default.nix carries the truce
+  # that keeps both usable inside 100.64.0.0/10. resolved stays the single DNS
+  # backend (hence handing NetworkManager over to it) because both daemons
+  # register their search domains per link over D-Bus rather than rewriting
+  # resolv.conf, so neither has to win.
   netbird = {
     services.netbird = {
       enable = true;
