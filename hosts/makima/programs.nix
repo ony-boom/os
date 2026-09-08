@@ -1,9 +1,7 @@
 {pkgs, ...}: let
-  # Work mesh, alongside personal Tailscale -- ./default.nix carries the truce
-  # that keeps both usable inside 100.64.0.0/10. resolved stays the single DNS
-  # backend (hence handing NetworkManager over to it) because both daemons
-  # register their search domains per link over D-Bus rather than rewriting
-  # resolv.conf, so neither has to win.
+  # Work mesh, next to personal Tailscale (see ./default.nix). resolved is the
+  # single DNS backend -- hence NetworkManager handing over -- because both
+  # daemons register search domains per link over D-Bus, so neither has to win.
   netbird = {
     services.netbird = {
       enable = true;

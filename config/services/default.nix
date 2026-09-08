@@ -15,12 +15,9 @@
   services.openssh.enable = true;
   services.tailscale.enable = lib.mkDefault true;
 
-  # mDNS, so hosts find each other on the LAN by name without a VPN in the way.
-  # This is what makes `make push-makima HOST=makima.local` keep working across
-  # DHCP lease changes: it resolves whether or not either mesh happens to be up,
-  # and a bare 192.168.88.x is a lease that moves. publish.addresses is the half
-  # that answers queries; nssmdns4 is the half that asks, and both hosts need
-  # both to resolve each other.
+  # mDNS, so hosts find each other on the LAN by name without a VPN in the way:
+  # `make push-makima HOST=makima.local` survives DHCP leases moving. publish
+  # answers queries, nssmdns4 asks, and both hosts need both.
   services.avahi = {
     enable = true;
     nssmdns4 = true;

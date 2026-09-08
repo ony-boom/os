@@ -29,22 +29,9 @@
     iptables -D nixos-fw -p tcp -s 172.28.0.0/16 --dport 3000 -j nixos-fw-accept || true
   '';
 
-  # NetBird (work, ./programs.nix) and Tailscale (personal) both live inside
-  # 100.64.0.0/10, and they only coexist once Tailscale stops policing that
-  # range: its ts-input chain ends with `! -i tailscale0 -s 100.64.0.0/10 -j
-  # DROP`, which eats every NetBird packet arriving on wt0. Turning netfilter
-  # off drops the whole chain set rather than trying to poke a hole in it.
-  #
-  # Routing needs no help. On Linux tailscaled installs a /32 per peer in table
-  # 52 -- the single 100.64.0.0/10 route is a macOS/Android optimisation -- so a
-  # NetBird address misses table 52 and falls through to main, even though the
-  # `ip rule` at 5270 sends it to table 52 first. Two cases still collide: a
-  # Tailscale exit node, whose default route in table 52 swallows everything,
-  # and a Tailscale peer holding the exact address of a NetBird peer.
-  #
-  # ts-input also *opened* with `-i tailscale0 -j ACCEPT`, which is what let
-  # inbound tailnet traffic past the host firewall; trustedInterfaces is that
-  # rule, restated in NixOS' own firewall now that Tailscale writes none.
+  # NetBird (work) and Tailscale (personal) share 100.64.0.0/10, and ts-input
+  # drops CGNAT traffic that isn't on tailscale0 -- killing NetBird on wt0.
+  # Off takes that rule with it, plus the `-i tailscale0 -j ACCEPT` below it.
   services.tailscale.extraSetFlags = ["--netfilter-mode=off"];
   networking.firewall.trustedInterfaces = ["tailscale0"];
 
