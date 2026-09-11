@@ -40,6 +40,9 @@
 
     ghostty
 
+    # GUI over agent CLIs; needs one on PATH (claude lives in ~/.local/bin)
+    t3code
+
     pavucontrol
 
     vlc
