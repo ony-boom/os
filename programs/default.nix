@@ -54,8 +54,6 @@
 
     agenix
 
-    zed-editor
-
     bruno
 
     android-tools
