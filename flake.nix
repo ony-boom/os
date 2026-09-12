@@ -19,6 +19,11 @@
       url = "github:modem-dev/hunk";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    claude-desktop = {
+      url = "github:aaddrick/claude-desktop-debian";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -49,6 +54,7 @@
           (_: _: {
             hunk = inputs.hunk.packages."${system}".hunk;
           })
+          inputs.claude-desktop.overlays.default
         ];
       }
 

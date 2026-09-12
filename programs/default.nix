@@ -40,8 +40,12 @@
 
     ghostty
 
-    # GUI over agent CLIs; needs one on PATH (claude lives in ~/.local/bin)
-    t3code
+    # Claude Desktop (aaddrick/claude-desktop-debian flake). The -fhs variant is
+    # upstream's default: MCP servers get a normal /usr to spawn node/npx in,
+    # and it bundles qemu_kvm + OVMF so Cowork can boot its VM sandbox. That
+    # qemu is the same ~0.94 GB vm-stuff.nix keeps out for quickemu — accepted
+    # here because this one is a daily driver.
+    claude-desktop-fhs
 
     pavucontrol
 
