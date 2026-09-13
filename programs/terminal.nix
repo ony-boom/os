@@ -19,7 +19,8 @@
 
     zsh-vi-mode
     lazydocker
-    tuicr
+
+    rtk
   ];
 
   # services.atuin.enable = true;
