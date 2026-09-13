@@ -6,6 +6,7 @@
     ./vm-stuff.nix
     ./programming.nix
     ./game.nix
+    ./emdash.nix
   ];
 
   # base packages
