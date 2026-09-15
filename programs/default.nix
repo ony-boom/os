@@ -6,7 +6,6 @@
     ./vm-stuff.nix
     ./programming.nix
     ./game.nix
-    ./emdash.nix
   ];
 
   # base packages
@@ -54,6 +53,8 @@
     playerctl
 
     agenix
+
+    vscode
 
     bruno
 
