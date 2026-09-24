@@ -23,11 +23,9 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://cuda-maintainers.cachix.org"
       "https://vicinae.cachix.org"
     ];
     extra-trusted-public-keys = [
-      "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="
       "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
     ];
   };
