@@ -9,7 +9,8 @@
     gh # github cli tool
 
     openssl # some apps depends on it
-    yazi
+    # yazi
+    superfile
 
     jq
     ripgrep
