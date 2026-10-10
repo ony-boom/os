@@ -69,7 +69,6 @@
   in {
     nixosConfigurations = {
       maki = mkHost "maki";
-      makima = mkHost "makima";
     };
   };
 }
