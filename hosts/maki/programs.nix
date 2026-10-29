@@ -1,10 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     feishin
-    # jetbrains-toolbox
-    ardour
+    jetbrains-toolbox
     gimp2
-    spotiflac
     glab
     video-downloader
   ];
