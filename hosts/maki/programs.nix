@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     feishin
     jetbrains-toolbox
-    gimp2
+    gimp
     glab
     video-downloader
   ];
